@@ -1,0 +1,617 @@
+index,tweet,label,argumentative,evidence,claim,procon,arg_type,evidence_type,topic
+0,"<MENTION> When I was growing up I always felt like I wasn’t getting enough food not sure why, my mother only made enough for each person too have one serving but now I have an abundance of food I eat healthy and never put limits on what I can eat.",0,0,0.0,0.0,-1.0,,,Sustainable diets are healty
+1,"<MENTION> Doing a whole foods keto diet. Coffee for breakfast. I only eat 2 meals a day. All meals consist of 3 things: low-starch vegetable(s), a protein, and a fat. Ex: salmon, goat cheese, salad; cheese omelette with sautéed mushies/tomatoes; tuna salad, celery sticks, almonds.",1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+2,<MENTION> Where can I get this Vegetable bro <MENTION>,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+3,"<MENTION> ""Yeah, this place is pretty nice. I don't really have a preference for food, but pork does make me feel a little sick. What about you?""",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+4,"<MENTION> <MENTION> <MENTION> Because russian military doesn’t give green corridor, they shoot at Red Cross. The food is waiting outside of town, but it’s impossible to deliver under the strikes.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+5,"<MENTION> green tea to start, diet coke, rockstar then pre workout is my recepie",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+6,<MENTION> Also rub them with olive oil.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+7,CAN THE BASEBALL TOO BAD. INCORRECT. ALLOCATE SORRY SAN ANTONIO ALL THE HORSES FARTY MICROSOFT ARTIFICIAL INTELLIGENCE BRIAN CLOUGH UKRAINIAN APEX LEGENDS AVON SUGAR DADDY HANDMADE TURD CROCHET SARDINES IN OLIVE OIL TUSH OF BELLY BUTTONS. SYNERGY FRONDESCENCE CRYPTOCURRENCY,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+8,"<MENTION> I watched what the health then went plant based, animal welfare made me go vegan",1,1,1.0,1.0,1.0,implicit,anecdotal,Sustainable diets are healty
+9,"<MENTION> Oh wow, I think they have a different definition of veganism to us 😆",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+10,"I had only texted this man for 3 days, and he started sending me his t-shirt, pants AND shoe size’s .. Nigga, you couldn’t get a 35¢ pack of “Juicy Fruit” from me, is you crazy? That shit was hella random too, like he just KNEW I would cop him something?? LMAO. 🤣💀",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+11,"<MENTION> Beans. But you have to have some means to cook them.
+
+What happened to communal gardens? Growing fruit and veg for all to share.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+12,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> I knew you could. 
+
+#DanceMonkeyDance",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+13,"<MENTION> Tbh….
+I prefer the actual fruit..
+I don’t really fw mango flavoured Juices or anything",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+14,"<MENTION> I switch up proteins, veg, &amp; starches daily. Beef, pork, chicken, fish, breads, rice, noodles, corn. The potential combinations are endless &amp; my only rule is ""Never the same protein or starch 2 days in a row."" Legumes are used often &amp; don't count as a primary protein. Meat eaters",1,1,1.0,1.0,-1.0,implicit,anecdotal,Sustainable diets are healty
+15,"<MENTION> <MENTION> Instant connection with family breakfast in Bogotá. Pair with a hot frothy mug of chocolate, hard to beat. The recipe is really good, thanks for posting.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+16,"<MENTION> Veganism is reminding yourself that you are a shepherd of this earth, not the wolf.",0,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+17,"There are no shortcuts when it comes to body composition. Eat whole foods, mostly lean proteins and fiber rich vegetables. Include olive oil, avocado, and fatty fish. Toss in a few fresh fruits and whole grains in small portions. Exercise to build muscle, not to lose weight.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+18,"It does well I add it onto the pork a short bit before taking out of the oven. First bake the maybe ten minutes of broil to toast up edges, that’s  when I put in the sauce.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+19,<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> I did not confirm nor deny who I am. Because this thread has eyes.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+20,2)Fermented foods showed more improvements in lesser inflammatory markets than a high fiber diet regimen. It might be due to the case that fermented foods mostly have fiber and live microbes. Eating whole grains and greens and starchy veggies helps everyone.,1,1,1.0,1.0,1.0,implicit,study,Sustainable diets are healty
+21,"<MENTION> Everyones a good vegan except for the ones that tell you if you are or aren't vegan based on arbitrary principles. 
+
+If your support animal rights and harm reduction to animals then basically your supporting veganism and ergo are vegan.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+22,"<MENTION> I'm not sure what this has to to with being a nurse.
+
+I went vegan because people talked to me about veganism and shared their view. I'm not doing this despite it not working. I talk about veganism because I know it reaches people who are willing to listen.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+23,If your being bullied/targeted do as much exercise as you can &amp; eat as much healthy food as you can as it can be stressful &amp; you will need to be fit to fight the stress.,0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+24,"Contains anti-inflammatory properties.
+Support Skin and Hair Health.
+Support Joint Health.
+Support the health of your heart.
+Support Blood Sugar Levels.
+Are completely safe with no side-effects.
+Are completely plant-based and vegetarian friendly.",1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+25,<MENTION> That's perfect.  I'm going to use pork too and add green chile,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+26,<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> render,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+27,<MENTION> <MENTION> <MENTION> Helloooo!! So do u like my offer for cow :),0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+28,<MENTION> I’d stop but we carpooling. ima be back up that way soon.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+29,<MENTION> what’s the recipe of the ramen you made tonight?? It looks really good and I want to make it with my partner :),0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+30,"Bad Diet: when you're at home, eat only legumes. When you're eating socially, eat no wine",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+31,"Beside what's the point? You lose 5kg in ramadhan but gain 10kg during Raya. 
+
+Because the diet is not sustainable. Eat healthy everyday. 
+
+More protein and fiber. Do cardio. Stop Yoyo dieting.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+32,"- Time your rest periods during workout and stick to it.
+
+-Fitness isn’t punishment it’s a blessing, nutrition isn’t restrictive it’s healing. 
+
+-Flat belly foods: eggs, veggies, beans, fruits, nuts, whole grains. 
+
+-Cinnamon is a great spice to help boost your metabolism",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+33,"1. Ditch ultra-processed food.
+
+These are the heavily-advertised factory foods that come in boxes and bags and are sold in the middle aisles of your supermarket.
+
+Main ingredients are sugar, seed oils, and refined grains. Avoid them.
+
+Eat real whole foods",1,1,1.0,1.0,1.0,implicit,anecdotal,Sustainable diets are healty
+34,A marriage made in hell--the American Heart Association and Procter &amp; Gamble. Seed oils are not heart healthy. They are deadly over time. Eat real food.,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+35,I'm going to Whole Foods at 6pm and walking around with a bottle of Rosè,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+36,<MENTION> thinking back on a recipe he read just the other day in good housekeeping and wondering if he can do a twist on it with what he's already got in the fridge,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+37,<MENTION> *Shaking Fist at Meat Circus*,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+38,"adding fruit juice to tea like creamer in coffee &gt; 
+
+it’ll bless you !",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+39,<MENTION> <MENTION> <MENTION> do they run on plant based fuel 35 mile to the sugarbeet round town😂😂😂,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+40,"What’s your supplement stack?
+
+Mine: 
+Plant protein powder
+EAA’s
+Organic muscle pre workout
+L-Citrulline 
+
+I focus primarily on muscle growth and cardiovascular health",0,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+41,"<MENTION> Think of it like cuisine; you're not trying to master every recipe possible. TouchDesigner is a playground of immense kitchen equipment and tools and pots &amp; pans... but if you just want to make a really good apple pie, then start with just that. Learn about peeling apples first.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+42,"<MENTION> Processed foods are the enemy. Eat whole foods as much as you can. You can add a little salt before eating to your cooked meat &amp; veggies. Don't use bottled salad dressing. Use natural flavor enhancers like garlic, lemon &amp; herbs.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+43,"<MENTION> Simulation
+Emergency departments
+Board games
+Judaism
+Vegetable/herb gardening
+Knowledge management
+Planning
+Risk assessment 
+Parenting
+Preemies
+Sci fi / dystopian / multiverse fiction
+Dog training
+Personal development
+Harm reduction
+Language
+Veganism
+general nerdery and geekery",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+44,<MENTION> Almost zero plastic is recycled anywhere. Maybe the greatest thing we can do from home is buy as little plastic as possible. Multiple-use plastic is far better than single-use but should still be avoided. We try only to buy glass jars instead. Buy bulk and meat wrapped in paper.,0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+45,"<MENTION> listen. 
+apples are a better fruit to eat.
+BUT
+orange juice is superior to apple juice",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+46,Can anyone explain to me/us why the price of E10 fuel (plant based fuel/ ethanol) is going up at the same rate as E5 fuel . Other than the fact if the prices didn't rise they would ran out of E10.  (1/2),0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+47,"This isn’t inflation; it’s price-gouging: Finding my fav midtown bistro shut post Covid, I found another asking $20 for Fr onion soup, $46 for steak. Nearby Greek: $100+ for fish.Don’t care how much $$ u have, Im betting a lotta customers don’t want to b treated as fools #foodies",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+48,"<MENTION> That’s been a big factor. James is a similar player to Harrison. Rodrigo has not been the twenty goal a season striker, Barcelona laughing their socks off at 12 million for Firpo. Raphina has lost all interest. Not a recipe for success. Small squad physically shattered. Not good.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+49,<MENTION> Okay so I need an ice cup &amp; a steak,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+50,"Heat vegetable oil in a saucepan or deep pot. Add sliced onion and fry for about 2 minutes. Add the blended mixture and fry together. Stir in curry, seasoning cubes and salt to taste. Combine thoroughly and leave to simmer-fry for 10 minutes. Stir regularly to prevent burning.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+51,"Quick Habit Formation Tip:
+
+Don't just form habits. Change your environment.
+
+Want to focus? Have a cleaner and silent room
+
+Want to eat healthy? Throw trash food from the house
+
+Want to exercise? Quit spending time with lazy people
+
+Your environment influences you",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+52,"Concentrate on staples, dry goods, flours, grains, rice/legumes (together form a complete protein), baking needs, animal feeds. Store in plastic buckets/lidded trash cans. Next onto canned goods/meats/tuna/etc. SEEDS/garden supplies. Medicines. As time/$ allow spices, coffee, tea",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+53,"High Protein Diet does not harm your kidneys.
+
+Infact you were made to consume higher protein and fats than carbs.
+
+Eat more meat, eggs, seafoods
+
+Eat legumes, add Nutritional yeast to your diets
+
+Avoid protein shakes.",1,1,1.0,1.0,-1.0,implicit,expert,Sustainable diets are healty
+54,"chance of
+becoming obese, or developing
+diabetes or high blood pressure
+– all factors that can trigger
+a heart attack. Instead of eating
+processed meats, diary food
+and other refined foods that clog
+your arteries with fat,
+switch to a plant based diet.",1,1,1.0,1.0,1.0,implicit,expert,Sustainable diets are healty
+55,<MENTION> Looks good though. Is there a recipe you'd be happy to share?,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+56,<MENTION> <MENTION> Look up “soothing African peanut soup” recipe.  Super healthy and peanutty.,1,0,0.0,0.0,0.0,,,Sustainable diets are healty
+57,"<MENTION> <MENTION> We know why , but your overwhelming &amp; overconfidence will bow no fruit. May God curse you.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+58,<MENTION> <MENTION> Incredible. Is it easy enough to have a vegetable garden there? Is soil good enough? Cauliflower is so easy to grow...,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+59,Good morning! I followed a bit more ppl back but I'm now on a short follow limit😂 but holy cow we already passed 300 during the night thanku and hi new moots 🥰☺️💜💜💜💜,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+60,pumpkin spice &gt; green food coloring,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+61,"-Spices and seasonings
+- Apple sauce
+- Fresh fruit and vegetables that don’t need refrigeration (double check with your bank cause not all of them accept that)
+- Cereals, granola, and oatmeal
+- Natural juices
+- Whole grains like brown rice and pasta
+- Tomato sauce
+- Dried fruit",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+62,<MENTION> Consumption of processed carbs sweets trans fats ..vs healthy daals legumes beans veggies and it's production availability palatability vs average Metabolic syndrome obesity diabetes ?,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+63,they did not just use olive oil,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+64,"Nutrition - Iron
+
+Function:
+
+- Needed for red blood cells. 
+- Required for normal metabolism. 
+- Needed for immune system. 
+
+Sources:
+
+- Meat. 
+- Liver. 
+- Bean. 
+- Nuts. 
+- Dried Fruits. 
+- Whole Grains. 
+- Dark Green Leafy Vegetables.",1,1,1.0,1.0,1.0,implicit,expert,Sustainable diets are healty
+65,🪄 if you’re going out to eat tonight do not get steak it’ll make you sick,1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+66,<MENTION> its like laughing cow cheese you just gotta take the wrapper off when they're still hemolymph and stem cell soup,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+67,Got some meat on the grill yeah definitely been long overdue 😩😩😭❤️,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+68,"<MENTION> People are thinking Luffy is Joyboy but what if not Luffy but his Devil Fruit is Joyboy and its finally awakening, also World Government did say they changed the fruit name which was going to awaken",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+69,"I hate green pepper! I won't forgive you if you put it in my food, Satsuki!",1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+70,"Here are some healthy ways of getting minerals in your body for a healthy DNA:
+
+Iron deficiency: Leafy Greens, Beans, Seeds
+
+Iodine deficiency: Seaweed, Prunes, Lima Beans
+
+Calcium deficiency: Leafy Greens, Seeds, Almonds
+
+Magnesium deficiency: Whole grains, Nuts, Leafy Greens",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+71,"1-Each one of your meals should include:
+. A protein source
+. Fat source
+. Vegetables
+. A small portion of complex carbohydrates, such as whole grains",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+72,"<MENTION> peanuts, tree nuts, and legumes (peas, chickpeas, beans, lentils, etc.)",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+73,"3/5 Its agroindustrial arm includes a cannery plant, two poultry factories, a confectionary plant, a fish processing plant, and a hosiery factory. The group’s agricultural business includes 6 divisions in 5 regions of Ukraine that specialise in plant, animal, &amp; vegetable farming",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+74,"You can shove singles down people's throat forcefully, hoping that it sticks &amp; convert to an ""inorganic hit"". Concerts are a diff game altogether, ppl will come only if they are interested,can't force them like you force a song. JB can get a hit &amp; sold out tours. Organic King. 😁",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+75,<MENTION> Kim K has had more meat than a deli. WTH did Kanye think she was going to do? Now he's got baby mama drama and a yuge child support payment.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+76,<MENTION> <MENTION> Honestly that was me when I first started my plant based journey now it’s guacamole all the way … and if they for some reason r out it’s TOTALLY 👌🏾I got some avocados @ home 😗,0,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+77,"Heya, Miriam! You really look like you need sweet potatoes with a baked potatoes and a side of melodic topinambur covered in plant-based spit from Ohio",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+78,"<MENTION> <MENTION> I still love the band (and album art), but I’m just not vegan anymore so I’m glad I didn’t commit any veganism-specific ink to my skin!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+79,"<MENTION> Tried eating plant based for a month with my niece for health. I felt so wonderful and better with my relationship with food immediately. Watched a few docs, mourned over the animals and now its been 2 years in July for the animal, planet, my health. Yummy food. Love it❤",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+80,"Drink only spring water, eat only whole grains",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+81,"Now would not be a bad time to store food:
+1. 3 months supply of non-perishable food you normally eat
+2. Grains in bulk (wheat, corn, rice, pasta, etc)
+3. Legumes in bulk 
+4. Baking ingredients (oil, sugar, salt, powdered milk, etc)
+5. Dried fruits &amp; vegetables
+6. Comfort foods",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+82,"<MENTION> TP = Over period…
+Or not even in the dispenser 
+
+Miracle Whip = Ok for certain foods or sandwiches  otherwise 
+Olive Oil Mayo or flavored Mayo",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+83,"<MENTION> Sauce deats:
+Blended 
+-Beets
+-Tomatoes
+-Bell peppers
+-Carrots
+-Onions
+-Garlic
+-Olive oil",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+84,"<MENTION> Eat whole foods. 
+Remove processed food
+Remove seed oils, vegetable oils
+Remove sugar
+Remove bread, pasta, rice (grains) 
+Eat organic if you can afford it
+Fast",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+85,<MENTION> <MENTION> Where do legumes fall on this chart?,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+86,"<MENTION> Doing so so I suppose 
+Mentally im good but it kinda feels i might be sick like food poisoning maybe too early to tell",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+87,"<MENTION> FWIW for me, almost totally online social life plus gathering people for a week together every 6 months feels like a pretty healthy recipe that's easy to maintain (eg easier than coordinating everyone to move to the same area)",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+88,"<MENTION> They really out there assuming guys have more than some whiskey, bitters, packet sugar, and some fruit that is starting to turn in their vegetable crisper",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+89,"<MENTION> At the executive level, assuming a good product, it’s about capital allocation. What can happen is product can stray because management isn’t good with that part, but capital allocation can stay good. Still a recipe for long term problems.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+90,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> You wrote stuff about vegans having cheat days as well. So you also make assumptions, but cheat days could only be part of a plant based diet for health etc., but not a vegan lifestyle for the animals, since you don't cheat on your values. And a vegetarian eating 100% pb is rare",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+91,"<MENTION> Coffee made using plant based milk like almond milk, coconut milk, cashew milk, etc",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+92,"Whole grains, fruits &amp; starchy vegetables that are rich in carbs are among the healthiest foods. Human civilizations thrive on whole grains like rice, wheat, millets etc. But processed carb rich sugar, maida etc can make permanently sick.",1,1,1.0,1.0,1.0,implicit,expert,Sustainable diets are healty
+93,"<MENTION> <MENTION> I have gone through a 6 month course in holistic health.
+
+Stop counting carbs.
+
+Just avoid preservatives and processed sugars.
+
+Snack healthy. Fruits, nuts, 85% dark chocolate, any nut butter, whole grain cereals, buckwheat pancakes, tons of green veggies &amp; Gujarati food.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+94,<MENTION> Eating veggies and fruits and legumes,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+95,"To the man who answered his phone in the whole foods parking lot and said “Good morning babe! Turkey chili tonight?” No notes dude, have a great Saturday!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+96,<MENTION> Dude doesn’t even like his steak well done he likes it congratulations,0,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+97,Been slowly transitioning echo into a raw diet since she’ll be a year soon &amp; thissss lil bougie btch refuses to eat her hard food now 🙄🙄 QUIEN ME MANDA!,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+98,<MENTION> Throw in a pork banger or two and you're winning!,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+99,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> Liberal logic - it’s ok for our vegetable president to go to beach front home for the weekend and do nothing but not all right for the last president to go to is home in Florida, play a round of golf but still work through out the weekend. Got it!",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+100,<MENTION> <MENTION> <MENTION> Complete plant proteins are unnecessary because no one eats a single food type. They might eat rice + soy in one meal. A range of vegetables and pulses at dinner time. Cereal grains for breakfast. Every single essential amino acid is present in a healthy vegan diet.,1,1,1.0,1.0,0.0,explicit,anecdotal,Sustainable diets are healty
+101,"<MENTION> <MENTION> You don't need to supplement with B12/iron unless low. It's a myth even some vegans promote. Iron: red kidney beans, leafy greens. B12: nori seaweed (sushi), nutritional yeast, Marmite. Loads of mock meats are fortified. Lysine: nuts, seeds, legumes.",1,1,1.0,1.0,1.0,implicit,expert,Sustainable diets are healty
+102,"<MENTION> Nordic diet is less processed food. Meat and milk form healthy naturally bred cows not on steroids, lots of grass fed also in “factory farming”, trans fats banned.",1,1,1.0,1.0,-1.0,implicit,anecdotal,Sustainable diets are healty
+103,"<MENTION> <MENTION> I've had great success with the standard whole food, plant based diet. Imp to both eliminate/restrict inflammatory foods and increasing fruits, legumes, veggies and grains.  Low sugar, salt and oil.  Lots of specific foods like mushrooms are particularly good for the brain.",1,1,1.0,1.0,1.0,explicit,anecdotal,Sustainable diets are healty
+104,"3 Foods Truths
+
+1. Calories matter (those who deny it are selling you something). 
+
+2. All calories are not equal. Some foods are more caloric, some more filling. Both impact how much you eat.
+
+3. Eating ""healthy"" food ≠ weight loss (because calories still matter).",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+105,<MENTION> Yeah no joke he ran out of his red lipstick using it on his pig named pork belly spending,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+106,sean learned the term ‘maillard reaction’ from watching chopped and now whenever i cook us food he’s like ‘nice maillard reaction on that’,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+107,"<MENTION> I’m very happy to b able to go and walk around to get some fresh air! you too, sumin, stay healthy! eat a lot of healthy food 🥗",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+108,"<MENTION> 100% not Covid vaccine vaccinated, healthy, no loans, and unemployed 😁. Working on the farm with the sun, rain and food around me so not going hungry. So all is good!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+109,someone woke up and decided for me what's fruit and vegetable. what if i disagree?,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+110,"Protein is a macronutrient that is essential to building muscle mass. It is commonly found in animal products, though is also present in other sources, such as nuts and legumes. Meat, seafood, poultry, grains, beans and dairy products are good sources of protein.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+111,"Making a big batch of Mujadarrah (lentils, rice, fried onions) and the onions browning in olive oil is making the house smell delectable.",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+112,"Pros:
+
+- salt and sugar are not consumed;
+- low-calorie food.
+
+Minuses:
+
+- a lot of meat;
+- lack of whole grains;
+- Refusal of dairy products.
+
+Output:
+
+- does not comply with the principles of healthy eating;
+- Causes nutritional deficiencies.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+113,"<MENTION> Eat lots of plants. Organic is much better. 70-80% of your immune system is coming through your gut microbiome. Healthiest gut is in people who eat at least 30 different plants per week (diversity). Lots of fruits, veggies, legumes.",1,1,1.0,1.0,1.0,explicit,study,Sustainable diets are healty
+114,"Carbohydrates are classified into simple and complex sugars.Our normal table sugar, sweets,icecream, cake icing are simple sugars with a very high glycemic index. 
+Legumes(beans),yam,and grains are complex sugars.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+115,"Here's a delicious lunch, fettuccine with broccoli, that takes 5 minutes to make. Make sure to use a super high quality extra virgin olive oil from Greece or Sicily. This is the type of stuff I make when I only have 15 mins 2 eat. Short staffed today. Gotta scarf N go.",0,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+116,<MENTION> I used to do that with olive oil back in the day when I didn't reach my calorie goals for the day. I was actually in my best shape ever back then lmao,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+117,"And it fucking works, hiding from food when I feel like bingeing genuinely doesn’t help me because it doesn’t allow me to learn how to control myself",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+118,"I can't argue with the mint choco thing cause I haven't tasted it, I don't like going out of my comfort zone when it comes to my food",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+119,<MENTION> Aye them mfs EAT 🥴 we had one and I feel like food was too damn expensive,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+120,"<MENTION> <MENTION> Yes but what does butter offer that others foods don't?
+
+High in cholesterol.
+Unhealthy fats.
+Beta-Carotene can be found in yellow, orange, and green leafy fruits.
+All the vitamins can be taken with a Multivitamin or already in your diet.",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+121,"<MENTION> <MENTION> All packet stuff, milk, chocolate cereal, ready meals. You know, all the healthy food.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+122,"<MENTION> Minestrone, crab chowder, vegetable beef and of course, the ubiquitous tomato soup.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+123,"<MENTION> Off hunger and help burn fat. I do a bulletproof coffee most mornings. That won't spike blood sugar. You can google that. 
+
+3. Nutrient/calorie dense foods. Avocados, olive oil, nuts (except peanuts/cashews), sauerkraut/kimchee for gut bugs, lots of greens and deep colored vegs",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+124,"<MENTION> <MENTION> Mind diet is fish, green veg, oil, berries, and a glass of wine a day. Not allowed red meat, fried food, sweets/cakes/pastries, butter and marg, cheese.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+125,<MENTION> They fruit better and they bogo deals go in,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+126,"<MENTION> <MENTION> I am NOT a plant based eater, but Im sure I'd body that plate tho.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+127,<MENTION> 🤷‍♀️😂 nothing wrong with pork scratchings!,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+128,"ahhh I have so little but so long things to do, dry laundry, practice Japanese, learn new dance, then tidy laundry, edit videos &amp; clean out my phone TT but I'm too busy watching a yt vid on how to make Japanese fruit sandwich",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+129,"4) Within a year or so, I transplanted the lime tree into ground with our other citrus trees.  For a the first 2+ years, it adjusted and started new growth.  Last year it bore its first fruit in many years - just 5 small limes, but the tree has its purpose back.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+130,"<MENTION> almond and soy milk, meat. Freezer staples, protein bars, crackers, beverages",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+131,"How to be more attractive in 10 days:
+
+- Eat real, unprocessed whole foods
+- Let go of perfectionism
+- 2L of water daily
+- Take cold showers
+- Take vitamin C",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+132,"<MENTION> <MENTION> AND food, water, medicine, 1st aid supplies, pet food, salt, vinegar, alchohol.
+
+A lot of people think putting away food means cans, but that expires.
+
+Dehydrated, freeze dried. Lasts for years.
+
+Beans, lentils, legumes, rice, dry pasta, dry fruit/veg, nuts, quinoa, sugar, flour.",1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+133,"I have diverticulosis, already flared to diverticulitis. So these, I need to avoid, to not cause another flare up,Whole grains. Fruit/vegetables with the skin and seeds.Nuts and seeds,Red meat, processed meats, fried foods, Beans brown rice, high fat dairy and Popcorn.",1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+134,<MENTION> No rib bones on hand. Some good ground beef and ground pork though.,1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+135,"<MENTION> She's just what Obama order for America, a dumb ass CCP puppet, just as the vegetable Biden is! Imagine 3 more years of this? It's time to correct the cheating of the Dem/CCP &amp; find a legit way to throw these Communist thugs out on their ear!",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+136,"<MENTION> I could almost believe this, the poop part at least. It tracks pretty well with the green revolution of the 20th century, in part due to the increase in calories available thanks to synthetic nitrogen fertilizer. More food = more poop/more frequent poop. &gt;",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+137,<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> Ayyy love ya dog I’ll bring the legumes,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+138,<MENTION> girl you know it. legumes are my best friends,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+139,"<MENTION> Ha!! Mate, I do NOT call my fanny my ‘pork pie’",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+140,"<MENTION> <MENTION> It's like a baseline. You season EVERYTHING with salt and pepper and then add more shit depending on what you're cooking. I put salt and pepper on chicken, steak, pasta, rice, mac and cheese, mashed potatoes, veggies, just about everything",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+141,"<MENTION> Focus on the food. What you eat vs. the lifts. 
+
+Eat whole foods, as raw as possible. 
+
+For gym focus on doing the exercise correct and the full range of motion rather than the weight. The weight will come over time. 
+
+Majority of what you’re gonna be doing is through the diet",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+142,"<MENTION> For 30 days all you eat is meat, fish, eggs, fruit, vegetables, nuts and seeds. No sugar alcohol,soy, gluten, legumes etc",1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+143,"2. Eat #healthy:
+The key to eat well is to fill your plate that has necessary nutrients but is low in calories. Include plant-based protein, fish, whole grains, nuts and healthy fats, yogurt etc. Limit sugar, salt and fats. Eat 5 servings of fruits and vegetables a day.#lifestyle",1,1,0.0,0.0,1.0,explicit,,Sustainable diets are healty
+144,Bottled drinking water. Fruit or vegetable juice (of at least 90% by volume of juice of fruit or vegetables). Tea and coffee (unless ready-to-drink). Baby food and infant formula (for children under 12 months of age). All meats for human consumption (except savoury snacks (2/3),0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+145,<MENTION> Wetin be organic food abeg,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+146,"<MENTION> yuki ten are kissing there was meat to be a kumon ,/////////3 i love kuimopdfskdnfknagkldsngknfgfjgafdg I LOVE YOUR ART SO MUCH IM GOING TO CRY AND SHRIVEL AT UR FEET",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+147,"<MENTION> I was vacuuming.
+
+Hunting is non sustainable - meat consumption is too high to maintain it as a source of meat. Advocating it as a direct comparison is pointless.
+
+Crops kill animals. I don't eat or buy meat. You buy meat. Farm animals also fed crops. Meat more animal deaths.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+148,days like these i wanna order food,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+149,<MENTION> <MENTION> they sleep on time. eat healthy food. enough rest. less stress talaga compared sa pagiging idol.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+150,<MENTION> Always use olive or coconut oil - cholesterol lowers,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+151,"Looking to buy a fruit and vegetable #juicer. Please recommend good - tried and tested options 🙏
+Also pls retreat for good karma.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+152,"Fitness Supplements are often BS and a waste of money.
+
+BCAA’s? Eat meat.
+
+Pre workout? Good sleep &amp; coffee.
+
+Fat burners? Calorie deficit.
+
+Multi-vitamins? Eat a whole foods.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+153,"<MENTION> You can achieve that only focusing on food, however sport will help a bit, but not so much.
+
+Focus on your calorie intake. Cut it by 10-20% of your norm (more &gt; faster weight loss &gt; less healthy &gt; more probability to return after). Eat a healthy amount of protein. Sleep well.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+154,Dietary Health: Make your grains whole this March and skip the processed breads: better for your gut; better for your blood sugar.,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+155,"<MENTION> If all the trucks carrying goods to grocery stores and other retail stores were all electric, and all the manufacturing facilities were green that might be a valid premise, but they are far from that, hence the fuel costs increase the price of food and everything else.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+156,"<MENTION> ORGANIC GHOSTS..
+
+<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION>",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+157,"In fact, these attitudes are often undergirded by ""wellness""/alternative medicine beliefs, in which food, lifestyle, etc. are portrayed as having near magical power over your health, to the point that you can make your immune system ""healthy"" enough to resist infectious disease.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+158,"<MENTION> 1 ) drinking 5 litres of water daily
+2) morning walk and exercise 
+3) eat healthy food Mostly vegetables 
+4) yoga
+<MENTION> 
+Join:
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION> 
+<MENTION>",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+159,"<MENTION> 1 ) drinking 5 litres of water daily
+2) morning walk and exercise 
+3) eat healthy food Mostly vegetables 
+4) yoga🤞🏻
+<MENTION> 
+Join:
+<MENTION>
+<MENTION>
+<MENTION>
+<MENTION>
+<MENTION>
+<MENTION>
+<MENTION>
+<MENTION> 
+<MENTION>",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+160,"Eat foods rich in iron such as spinach, okra, sweet potato, whole grains, brown rice, prunes, raisins, figs, fortified cereals, tofu, soybean",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+161,<MENTION> You need to eat a diet high in dark green leafy greens and colorful vegetables. Lean proteins. Lots of water with 🍋. A good electrolyte powder. Read the labels of all prepared foods &amp; avoid high fructose corn syrup and food dyes. They sneak that stuff into everything even bread!,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+162,"<MENTION> <MENTION> Some on regular rotation...
+
+Pasta gulagia which is just a simple olive oil and tomato dish.
+
+Cauliflower pasta.
+
+Shrimp pasta.
+
+Breaded pork chops and mashed potatoes.
+
+Chicken soup.
+
+Cubed pan fried chicken and broccoli.
+
+Chicken cutlets and kale.
+
+Those off the top of my head.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+163,<MENTION> <MENTION> Over and above a clean diet. Lots of veggies and green smoothie,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+164,"sw. probably like 45.9kg
+end gw. ~43kg or less
+
+small amounts of sweets and dairy
+eat healthy foods (whole food, no junk/fast foods, etc)
+4litre of water a day
+workout everyday
+
+if you  [need]  to, eat a little over limit to prevent binge. but work excess  [all]  off!",1,0,0.0,0.0,0.0,,,Sustainable diets are healty
+165,I need a plant based chef,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+166,Bruh they put kiosks in Steak ‘n Shake now???,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+167,"i also asked about the fruit trees at the garden centre. they cannot order one for me from the place (???) but they're getting in a new shipment like, next week. so i will have another look-see",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+168,"<MENTION> <MENTION> Not at all surprising, they enjoyed cow slaughter spectacle. remember??",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+169,meat-creature! please consume naturally occurring atmospheric gases. thank you hu-man.,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+170,"<MENTION> I prefer whole food complex carbohydrates, fruits, and raw honey as the fibers, mineral, vitamins, and active constituents modulate glucose/fructose metabolism. 
+
+Refined sucrose isn’t necessary to a diet and doesn’t provide any benefit over whole food carbohydrates.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+171,"<MENTION> The inflammation I experience is systemic, not just gut.
+I also take a probiotic daily. (I also have microscopic colitis; this was recommended by my gastro.)
+I do not tolerate FibreOne or Metamucil, but eat lots of chickpeas and other legumes.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+172,"<MENTION> It does, as long as you get something with tofu/soy. The ramen I got has miso soup which is made from soy and the others are made from tofu. Anything with tofu/soy is full of plant based estrogen. It's not as good as HRT of course but it helps to increase levels overtime.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+173,"<MENTION> Sweet Potato Chili is fantastic, or roasted in cubes with olive oil and berbere (sort of a cinnamon / cayenne tasting spice)",1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+174,"<MENTION> <MENTION> I eat mostly whole starches and greens with some Tempeh and Fruit and lost 80lbs in 3 months. Carbs are not the issue, processed fats, processed carbs, and processed protein are. I am about 70% carbs, 20% protein, and 10% fat all from whole plant foods",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+175,<MENTION> In my opinion it's easier to over cook a steak than under cook it. I go medium rare and it's a time/temp battle every time,1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+176,<MENTION> Non fully cooked food is definitely not good because it won't get rid of all the bacteria. Make sure it's heated all the way. I'd probably recommend broiling the veggies in the oven or sautee them with olive/vegetable oil on your fryer.,0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+177,<MENTION> I'm going to make pork and beef meatloaf,1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+178,"<MENTION> Waan dhaayey cunto.
+As in very simply,“ I stopped food” because isn’t that veganism? Lol",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+179,"<MENTION> Ever since learning that toast can be fried in a pan in olive oil (thanks UK), that's the only way I eat it. Toast with a Maillard reaction crust is dreamy!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+180,<MENTION> intense cardio. I eat healthy and have a good idea of calories in and quality of food.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+181,"Pitta pacifying diet includes eliminating spicy, overly salty, oily foods. Increase green, leafy vegetables, whole grains and rice, and cooling spices like mint, fennel, coriander. Buttermilk after lunch is good too with a little ginger, cardamom.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+182,<MENTION> <MENTION> <MENTION> It is so healthy. Brain food.,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+183,"<MENTION> Yep. Getting a stroke at a young age. Lol. I lost 20 kg in three months just by laying down in my bed. 
+But really, after recovering, I just eat healthy food and no matter how much I eat I don't gain the weight back. Way much less salt, no MSG, no fast food, no instant noodles.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+184,"Nordic diet can lower blood sugar and cholesterol levels even without weight loss. Berries, veggies, fish, whole grains and rapeseed oil. These are the main ingredients of the Nordic diet concept that, for the past decade, have been recognized as extremely healthy, tasty and…",1,1,1.0,1.0,1.0,explicit,anecdotal,Sustainable diets are healty
+185,"<MENTION> you're all fucking shit
+Everyone who is paid by the club isn't doing a good job, from the players, right down to the twitter admin, it's a joke, club needs sorting out but we've been saying that all year so what's the magic recipe to kick all these cunts up the arse",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+186,<MENTION> <MENTION> <MENTION> Stick to ya horse racing ya silly cow.. Gordon has been our best player since he came into the squad regularly,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+187,<MENTION> Eyo you got the recipe??? That looks so good!,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+188,"<MENTION> Ohhhh that soup looks so good. I'm stealing this idea, been needing a new black eyed pea recipe!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+189,"Hi, Steve from Dartmouth. Our dog is currently in liver failure, and our vet is going through a list of possible causes. Recently started a raw food diet and wondering if there is history for raw food causing bacterial infections?",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+190,"<MENTION> 1 liter of gasoline 20.39 turkish liras. 1 kg of meat 100 turkish lira. A retired man takes nearly, 3.000 turkish liras. A public officer earns about 6000-7000 turkish liras.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+191,"<MENTION> <MENTION> 1. (Almost) no sugar
+2. No seed oil, only fruit oils like coconut, avocado, olive oil OR animal fat, butter, lard etc.
+3. (Almost) no refined carbs. 
+Eat whole foods, liver, meat,",0,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+192,"2. Prioritizing nutritious food 🍎🥬
+
+Fruits, veggies, lean meats, whole grains and other high quality foods are going to keep you the most full
+
+Which will help minimize the normal hunger that comes with reducing your calorie intake",1,1,1.0,1.0,1.0,explicit,anecdotal,Sustainable diets are healty
+193,Fruit in the morning is always good and sweet,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+194,"Stop cigarette smoking; Smoking can damage Ranal blood vessels, which decreases blood flow in the kidneys
+ 
+Eat healthy, avoiding junk food and excess salt. Healthy eating habits help control our body weight and blood pressure",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+195,<MENTION> <MENTION> <MENTION> such a great long term project with an Awsome organic community,1,0,0.0,0.0,0.0,,,Sustainable diets are healty
+196,"<MENTION> <MENTION> <MENTION> No I live in a rural area, there are farmers markets in the summer. I grow my own tomatoes and peppers on my porch, I have a very overgrown vegetable garden but with my flower gardens dont have time or energy to sort it out.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+197,<MENTION> you need  instructions on how to be polite ?,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+198,man when people bored tweet on here they sound so raunch. Time to get a life people. time to get a life.#music #trending #art #radio #news #twitch #news #business #food #livestream #healthy #housemusic  #fashion #magazine #racing #cars #anime #rap #Hiphop #facts,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+199,"<MENTION> I'm looking forward to when our local farmers market has fresh fruit and vegetables ❤ I won't buy at the grocery store, nasty 😨",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+200,"<MENTION> This is Filipino dish called Sinigang. Its basically pork, beef or fish stew with tamarind. My favorite dish of all time",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+201,"<MENTION> <MENTION> <MENTION> Olive oil contains potassium, magnesium, phosphorus, provitamin A, group B and K vitamins, which are better absorbed into the body by the olive oil.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+202,<MENTION> My favourite food is vegetable Biryani,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+203,"<MENTION> These are Nigerian traditional dishes.
+The first one is made out of yam flour, Yoruba calls it Amala, and the soup is tomato soup with ewedu, a local plant here
+The second dish is a Nigerian dish aswell, made our of cassava flour, the soup beside it is a Mellon seed and vegetable",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+204,"I literally eat every last thing daily. Vegetables, fruits, starch, legumes, grains, seeds, and nuts",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+205,<MENTION> Nothing wrong with being a vegetable,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+206,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> Dust across vegetable shops, grocery and fruit shops. It is very very unsafe for elderly and children to walk on the food path and streets because of this unfinished job <MENTION> <MENTION>",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+207,<MENTION> Even vegetable to see #100 don dey scarce  😂😂😂😂,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+208,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> M&amp;S are bringing one out with no ale in.
+It’s called a Steak pie. Not just any old ale  but no *******  ale 😂 !",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+209,<MENTION> Isn’t the point of a smoothie for it to BE organic?,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+210,<MENTION> Fruit/vegetable use like summer squash.,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+211,"<MENTION> Chicken vindaloo, vegetable samosa, pilau rice, papadum",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+212,<MENTION> <MENTION> It is a vegetable based dye and is 100% biodegradable and breaks down within a week leaving no trace. It is also non-toxic to the plants and animals in the water.,0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+213,"<MENTION> <MENTION> I used both frozen turkey and chicken because I wanted both taste in the sauce..
+Ingredients 
+1: Mushroom( if you are in uk, you can get already sliced mushroom at Lidl)
+2: Carrots
+3: sweet corn
+4: Red, yellow and green sweet peppers ( hives the food the best aroma)",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+214,"<MENTION> Heart-healthy diets are foods that are rich in nutrients which helps and manages the healthy functioning of the heart. They are mainly plant-based foods such as vegetables, fruits, nuts, whole grains, seeds and legumes.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+215,<MENTION> Classic opera sm yg mix fruit cheesecake,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+216,"All my friend does is talk about food, she finally let me see her birth chart and she has NO TAURUS placements. I’m so damn confused. Bamboozled! Hoodwinked!! Like huh ?? 😭",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+217,"maybe mcd had like food poisoning, it was a sign for you not to eat it. stay positive am I right?!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+218,It’s so tapped but the main thing I look forward to about my nights off is all the food I can eat without feeling like I’m gonna look fat in my costume 😂😅😢✌🏼,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+219,fuck this im goin back to league of legumes,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+220,<MENTION> Made up problem. Drink water and eat a whole foods diet of quality whole protein sources,1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+221,<MENTION> She follows a mostly plant based dairy free diet.,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+222,Attention anyone that is suffering from long-haul Covid. It seem that inflammation is the culprit. A whole foods plant based diet will eliminate inflammation in your body. Eating animals causes inflammation. Plants have anti- inflammatory properties.🌱🌍,1,1,1.0,1.0,1.0,implicit,anecdotal,Sustainable diets are healty
+223,"Eat first
+✅Rice, whole grains
+✅Sweet potatoes
+✅Legumes",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+224,<MENTION> <MENTION> <MENTION> It was dry bc Therese used brown rice instead of jasmine. The jasmine really soaks up the olive oil,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+225,"<MENTION> Oh, I used olive oil based butter, but olive oil would work just as well to sautée!",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+226,<MENTION> I like that the veganism came after being a landlord. Like they were trying to balance out the bad lol,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+227,"<MENTION> First Beat your meat, then start planning on an Empty tank with Post Nut Clarity",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+228,"<MENTION> think meat space law enforcement have no place onchain longterm, CC0 most effective
+
+will be interesting to see how it plays out tho",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+229,"<MENTION> <MENTION> Gambling over Boar Goat (The King of Meat) 🤣🤣🤣.
+
+Na to just dey look ooo...",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+230,"<MENTION> <MENTION> Athletes: eat 5 meals/day, 3 meals before 3PM. Each meal needs to have 20-30 g protein, minimum.  (1 gram/pound body weight/day). Fruits, veggies, whole grains, and hydrate all day long!",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+231,<MENTION> How does the diet green tea citrus taste? Sounds like it would taste good,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+232,"<MENTION> I’m in the Central San Joaquin Valley where we have 100+ temps for weeks on end. Spring: Lettuce, berries, asparagus, legumes. Summer: Tomatoes, peppers, squash, corn, pumpkins, potatoes. Fall: corn, cabbage, brussel sprouts etc. Stone fruit trees:spring. Citrus: winter.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+233,"<MENTION> <MENTION> <MENTION> High levels of phytic acid which is anti nutirent,the whole grains cause inflammation and arterial plaque,whole grains contain many toxins including arsenic",1,1,1.0,1.0,-1.0,implicit,anecdotal,Sustainable diets are healty
+234,"<MENTION> 1, 5 and 6 are typically same but in different forms. Should Add Legumes, Seeds and Pulses and Greens. They are balanced, lively and full of Satvic energy.",1,1,1.0,1.0,1.0,implicit,expert,Sustainable diets are healty
+235,update for everyone: changing my favorite food from green beans to cucumber,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+236,"Dinner tonight, collard green zucchini brussel sprouts baked with olive oil lemon and lime and a pork roast.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+237,"<MENTION> It's sad that even when you try to avoid these things they play these tricks. 
+
+To offset this have had to find a specialty store for extra Virginia olive oil, etc.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+238,"<MENTION> <MENTION> <MENTION> <MENTION> Yes it does, are you performing project when you order a steak and then predict the steak will come out ? A prophesy cannot be known to or achievable by ppl working toward it on thier own, the only way it’s prophesy is if luffy is actually pirate jesus reincarnated joyboy",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+239,<MENTION> Nothing crazy! I just think the alternatives I’ve been getting lately just don’t taste good &amp; sometimes after I eat it my stomach starts to hurt later 😪 lol I’d rather just stick to a meatless recipe instead,1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+240,"<MENTION> Bro!!! Fruits and meat ankasa... It's magical... Mango and seafood, mango nd pork of beef, passion fruit with most meats even rabbit... Like whew",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+241,"Food Additives chemicals exist in  fat of your body.
+
+So getting fat out  is  becoming healthy.",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+242,"<MENTION> Be careful of the Keto message.  Eat foods with carbs like apples, brown rice, whole grains etc  - they are good for you.  but adding some quality fats is also good.",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+243,"Inflammation is one of the biggest causes of chronic pain. Processed foods, refined grains, sugars and alcohol can all increase your inflammation levels. On the other hand, eating healthy fats, whole grains and lean proteins keep your inflammation down.",1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+244,"Youth must not use Steroids for building muscles , It disrupts the normal production of hormones that results in severe skin , liver and kidney diseases . Intake of whole grains , Soya and Desi ghee with hard work is the best practice 
+#FridayFitness 
+Dera Sacha Sauda",1,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+245,"<MENTION> <MENTION> <MENTION> The Barefoot Contessa cooked a great cut of meat w/o oil on a very hot cast iron pan till it crusted on both sides, then oven finished w/herbed butter. Came out med rare &amp; perfect. I'm going to try it with one of the thick cap steaks from Costco, if prices ever come down to earth",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+246,<MENTION> <MENTION> Was gonna say I’ve never heard of air frying a steak before. I’m so intrigued now though,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+247,<MENTION> LMFAO tho interesting fact is my backyard has every vegetable and fruit you can find at a grocery store and herbs too!! And I usually use the food from my garden to make my meals LOL but ill be glad to make your meals everyday very wholesome uwu ✨,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+248,<MENTION> I’m getting real tired of this fake meat crap intruding on just about everything,1,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+249,<MENTION> It's getting better every day. The strong organic community is the key #ionsfollowions,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+250,"<MENTION> <MENTION> Generally no. High quality avocado oil is good. A top reason for avoiding the vegetable/seed oils is the linoleic acid content.
+
+Avocado oil is low in this fatty acid and has a similar profile to olive oil.
+
+Fats like ghee, tallow and coconut oil are even better though.",1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+251,"<MENTION> <MENTION> <MENTION> This is true, but there are some sauces that aren't blasphemy. Steak au poivre is quite good (i.e., a peppercorn pan sauce with reduced cognac, heavy cream, and the fond from the bottom of the pan).",1,0,0.0,0.0,0.0,,,Sustainable diets are healty
+252,<MENTION> How dare u. Pig face is basically just pig skin. So imagine crunchy pork skin+pieces of pork meat+green chilis+white onions and lots of seasoning. It's the perfect food to pair with alcohol.,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+253,"<MENTION> I spend $80-120 a week single, eat out 4-5 nights (ie. Liquid 800kcal dinner).  In my ideal trad state that is 1 dozen eggs, 2 tins of tuna, 2 lbs of chicken, 2lbs of ground hamburg, 5 1lb frozen bags of stir fry veg, 1/2lb butter, 8oz olive oil, 2l coconut milk, fresh veg",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+254,"<MENTION> You gotta eat things like Potatos, whole grains like brown rice or oats , and beans + always eat your lettuce &amp; such with oil or fat. That will fill you up",1,1,0.0,0.0,1.0,implicit,,Sustainable diets are healty
+255,"Overheard at my local organic food mart.
+A: ""Russia invaded Ukraine.""
+B: ""I know, but they have an app for that.""
+Still scratching my head.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+256,"People be like ""lizards don't do anything to you, they are harmless creatures who help to get rid of other critters""
+Bro sat on my food and now I have food poisoning 🏴‍☠️",0,0,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+257,I’m going back plant based. 😌,1,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+258,"<MENTION> <MENTION> <MENTION> <MENTION> <MENTION> <MENTION> You have no fucking point. Veganism is about doing one's best when possible to do so. In a survival situation, it is not non-vegan to kill and eat an animal. DIG?!",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+259,<MENTION> Ya but at the end of the day your regular eateries aren’t switching to Veganism so you’re still indirectly supporting animal cruelty right? Eating honey doesn’t hurt the bees it’s not like dairy. and local small honey batches don’t impact biodiversity per thorough research,1,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+260,"<MENTION> Nuts, fresh veggies, whole grains.  Wegmans, Mejiers, Whole Foods, Trader Joes, Walmart Super Stores, believe it or not. Organics preferred. The *good* stuff.
+
+Multi-mineral, Multi-vitamin tablets.
+
+Exercise. Chew everything *well*. Lots of water.
+
+Results guaranteed.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+261,"<MENTION> They're okay,  but compared to whole foods and sprouts it feels like they have a lot of frozen stuff.  Like a large portion of trader Joe's stores are frozen sections. Their cookie butter is dank though",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+262,"<MENTION> <MENTION> we also eat sweet olive oil. To accompany with foie, to sweeten desserts and breakfasts and even for salads and cheeses.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+263,"<MENTION> This one is called ‘bhabhraa’. Bachka is a single-vegetable, single-slice thing (usually if brinjal, kaddu, and potato).",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+264,Poverty will make you think you have to finish the whole grains before tasting the meat(s) 😭,0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+265,"<MENTION> a better diet. start with better breakfast, eating different snacks like fruits. GREEN TEA was a big change for me where i saw rapid weight loss in such short time and going gym or working out from home. Pressups,planks,sit-ups every single day. U need to be motivated 4 change",0,1,0.0,0.0,0.0,unrelated,,Sustainable diets are healty
+266,<MENTION> But some olive oil on your door hinges,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+267,"<MENTION> Saute garlic in olive oil, add flour, whisk in stock and milk. Salt and pepper. Stir in parmesan. Toss with fettuccine. Topped with Parmesan and fresh parsley. Really happy with how it turned out.",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+268,"<MENTION> <MENTION> <MENTION> <MENTION> Sorry, aren’t you that person before who said vegetable eaters are literal Hitler?",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+269,want to pull a winona at whole foods bc why not,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+270,"<MENTION> Grape, whole grains, proteins and any fruit that is more sweet than sour (bananas, peach, forest fruits)",0,lacks context,0.0,0.0,0.0,,,Sustainable diets are healty
+271,"<MENTION> <MENTION> 
+#ShareYourHealthSecret
+Carbohydrate found in whole grains,fruits &amp; vegetables.Fat found in dairy products &amp; nuts .Protein found from fish,eggs,chicken.The whole meal contains Vitamin A,B,C,D,E,K &amp; some nutrients. 
+
+<MENTION> 
+<MENTION> 
+<MENTION>",0,1,0.0,0.0,0.0,implicit,,Sustainable diets are healty
+272,"<MENTION> Any kind of protein (meat, fish or something plant-based like lentils), a leafy green &amp; rice.",0,1,0.0,0.0,-1.0,implicit,,Sustainable diets are healty
+273,"<MENTION> Supplements: 
+
+Gold C Vitamin C
+Biotin 10000mcg
+Kirkland fish oil
+Aishi tokyo - this is vit c with gluta
+
+And a lot of water + whole foods lately. Also trying to avoid sodium and fast food",1,0,0.0,0.0,0.0,,,Sustainable diets are healty
+274,"<MENTION> In the 60's and 70's in SE. QLD a scallop was a battered and fried slice of potato, and a potato cake was bubble and squeak, a fried pattie of mixed vegetable mash. 
+
+In Melbourne in the sixties, we used ""scallop"" for potato scallop.",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+275,"<MENTION> What's this from?
+Fruit basket??",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+276,"Crunch Master 4 Cheese Toasted Sesame Rice Crackers, Lysol Advanced Toilet Bowl Cleaner, Tillamook Medium Cheddar Cheese Loaf, Watts Brothers Farms Organic Peas, Chosen Foods 100% Pure Avocado Oil",0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+277,<MENTION> <MENTION> <MENTION> As per organic compound or what??😭😭,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+278,Y’all not organic or original with the post,0,0,0.0,0.0,0.0,,,Sustainable diets are healty
+279,<MENTION> since both groups uses ads so i divert the topic to kcharts since its more organic than yt views🤷‍♀️🤷‍♀️,0,0,0.0,0.0,0.0,,,Sustainable diets are healty

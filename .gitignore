@@ -1,0 +1,17 @@
+__pycache__
+argmining-21-keypoint-analysis-sharedtask-code
+*.npy
+base_testing
+base_testing_germ_eval
+base_testing_germ_eval_Sub2_Engaging
+base_testing_germ_eval_Sub3_FactClaiming
+debater-eap-tutorial
+SharedTast-main
+tweet-crawler
+*.model
+all_scores.csv
+*.zip
+predictions.csv
+predictions-Copy1.csv
+.ipynb_checkpoints/
+credentials.json
