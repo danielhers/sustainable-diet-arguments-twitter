@@ -15,3 +15,4 @@ predictions.csv
 predictions-Copy1.csv
 .ipynb_checkpoints/
 credentials.json
+.DS_Store
