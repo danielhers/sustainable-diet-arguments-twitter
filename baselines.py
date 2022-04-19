@@ -77,7 +77,7 @@ param_grid = { # Could be made an argument
     'tree_method':["gpu_hist"]
 }
 
-def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks):
+def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True):
     
     tweet_embeddings = []
     
@@ -97,8 +97,9 @@ def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks):
     embedding = TransformerDocumentEmbeddings(model_name)
     # Get embeddings
     print('Generating the embeddings')
-    for tweet in df.tweet:
-        tweet_embeddings.append(embedding.embed(Sentence(tweet))[0].get_embedding().cpu().detach().numpy())
+    for topic, tweet in zip(df.topic, df.tweet):
+        sent = Sentence(topic, tweet) if use_topic else Sentence(tweet)
+        tweet_embeddings.append(embedding.embed(sent)[0].get_embedding().cpu().detach().numpy())
     
     tweets_data = np.array(tweet_embeddings)
     
