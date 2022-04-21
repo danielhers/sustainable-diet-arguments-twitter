@@ -4,14 +4,21 @@ import torch
 from sklearn.model_selection import train_test_split
 from flair.embeddings import TransformerDocumentEmbeddings
 from flair.data import Sentence
+
 import xgboost as xgb
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
+
 import nltk
 from utils import numerical_df
 from sklearn.metrics import f1_score as f1, precision_score as ps, recall_score as rs
 from debater_python_api.api.debater_api import DebaterApi
+
 from sklearn.model_selection import KFold
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import TrainingArguments, Trainer
+from datasets import load_dataset, Dataset, load_metric
+from transformers import pipeline
 
 import json
 import io
@@ -188,4 +195,96 @@ def ibm_baseline(df, tasks = possible_tasks):
     res = pd.DataFrame(res)
     res.columns = ('Tasks','F1', 'Precision', 'Recall')
     res = res.style.set_caption('Results from using imbs project debater api for 0 shot evalutaion')
+    return res
+
+
+
+def bert_baseline(df_train, df_test, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True, seed = 42, batch_size = 5, epochs = 1):
+    
+    
+    # Make sure task is correctly formatted
+    if not isinstance(tasks, str) and not isinstance(tasks, list):
+        raise ValueError("task must be list or str")
+    
+    if type(tasks) == str:
+        tasks = [tasks]
+
+    if not all(elem in possible_tasks for elem in tasks):
+        raise ValueError("task must only contain any of the following strings: ", possible_tasks, ', but found:', tasks)
+        
+    metric = load_metric('accuracy')
+    
+    print('Loading tokenizer')
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+        
+    def tokenize_function(examples):
+        if use_topic: 
+            tweet = f"{examples['topic']} [SEP] {examples['tweet']}"
+        else:
+            tweet = examples['tweet']
+        
+        return tokenizer(tweet, padding="max_length", truncation=True, add_special_tokens=True)
+
+    def compute_metrics(eval_pred):
+        logits, labels = eval_pred
+        predictions = np.argmax(logits, axis=-1)
+        return metric.compute(predictions=predictions, references=labels)
+    
+        
+    
+            
+    
+    res = [] # Columns
+    
+    for task in tasks:
+        print('Loading language model')
+        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+        
+        print('Setting up dataset for', task)
+        df_train_renamed = df_train.rename(columns={task: "labels"})
+        df_test_renamed = df_test.rename(columns={task: "labels"})
+        
+        train_data = Dataset.from_pandas(df_train_renamed)
+        test_data  = Dataset.from_pandas(df_test_renamed)
+        
+        
+        train_processed = train_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size)
+        test_processed = test_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size)
+        
+        train_full = train_processed.shuffle(seed=seed).remove_columns( df_train_renamed.loc[:, df_train_renamed.columns != 'labels'].columns)
+        test_full  = test_processed.shuffle(seed=seed).remove_columns( df_test_renamed.loc[:, df_test_renamed.columns != 'labels'].columns)
+        
+        
+        print('Setting up training')
+        
+        train_args = TrainingArguments(
+            output_dir = model_name + '_' + task,
+            per_device_train_batch_size = batch_size,
+            num_train_epochs = epochs,
+            evaluation_strategy='epoch'
+        )
+        
+        trainer = Trainer(
+            model = model,
+            args = train_args,
+            train_dataset = train_full,
+            eval_dataset = test_full,
+            compute_metrics = compute_metrics,
+        )
+        
+        print('Training')
+        trainer.train()
+        
+        print('Inferring')
+        predictions = trainer.predict(test_full)
+        preds = predictions.predictions.argmax(-1)
+        
+        label = df_test[task].to_numpy()
+        #print(label, test_full['labels'], predictions.predictions, preds)
+        
+        res.append((task, f1(label, preds, average='micro'), ps(label, preds, average='micro'), rs(label, preds, average='micro')))
+    
+    res = pd.DataFrame(res)
+    res.columns = ('Tasks','F1', 'Precision', 'Recall')
+    res = res.style.set_caption('Results finetuning bert-model ' + model_name + ' on ' + task + ' dataset and applying to test set')
     return res
