@@ -17,7 +17,7 @@ from debater_python_api.api.debater_api import DebaterApi
 from sklearn.model_selection import KFold
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
-from datasets import load_dataset, Dataset, load_metric
+from datasets import Dataset, load_metric
 from transformers import pipeline
 
 import json
@@ -105,7 +105,7 @@ def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, u
     # Get embeddings
     print('Generating the embeddings')
     for topic, tweet in zip(df.topic, df.tweet):
-        sent = Sentence(topic, tweet) if use_topic else Sentence(tweet)
+        sent = Sentence(f'{topic}[SEP]{tweet}') if use_topic else Sentence(tweet)
         tweet_embeddings.append(embedding.embed(sent)[0].get_embedding().cpu().detach().numpy())
     
     tweets_data = np.array(tweet_embeddings)
