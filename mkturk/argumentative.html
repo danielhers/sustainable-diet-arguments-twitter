@@ -4,10 +4,11 @@
 <section class="container" id="Sentiment"><!-- Instructions (collapsible) -->
     <div class="row">
         <div class="col-xs-12 col-md-12">
-            <strong>Select the class you best thinks describes the tweet:</strong>
+            <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Labeling instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+                <div class="panel-body" id="instructionBody">
+                    <h3>Instructions</h3>
+        <blockquote>The task here is to annotate tweets if they are stated in an argumentative manner.<br/> Argumentative is a broad concept but essentially means that the tweet either contains evidence or claims that would be relevant for a debate about some topic. </blockquote>
             <table class="table table-condensed table-striped table-responsive">
-                <tbody>
-                </tbody>
                 <colgroup>
                     <col class="col-xs-2 col-md-2" />
                     <col class="col-xs-10 col-md-10" />
@@ -15,25 +16,75 @@
                 <!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
                 <tbody>
                 <tr>
-                    <th>Classes</th>
+                    <th>Labels</th>
                     <th>Guidance</th>
                 </tr>
                 <tr>
                     <td>Argumentative</td>
-                    <td>Select this if the tweet is making a clear claim like "People need to stop trying to recreate meat" <br/> 
-                        Or implicit claim such as "Plant based options, yes!!!!!"<br/> Or if it contains evidence of some sort like citing a study or an expert like "I found some doctors do recommend a plant based diet to ease the inflammation. Going meatless is even recommended by ICA" <br/> 
-                        Or is mentioning a fact like "the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."</td>
+                    <td>Select this if the tweet is making a clear self-contained claim. A claim is self-contained if the statement is clearly taking a stance towards some topic. Claims can be reactions towards a topic, like showing excitement or disgust towards a topic. <br/> The tweet is also argumentative if it contains evidence of some sort. Evidence can be citing a study, referencing an expert, or stating facts or beliefs. They don't necessarily have to be true. </td>
                 </tr>
                 <tr>
                     <td>Not argumentative</td>
-                    <td>Select this if the tweet is clearly not argumentativie like "Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!" <br/> Or if it is humor "@mention @mention Lol - and the wash post is the PR firm and Whole Foods is the official food supplier" <br/> Questions are automatically not argumentative even if parts do sound like they are making a claim or have evidence "@mention Could you share the literature which supports that Irish beef and lamb production is low GHG compared with meat from non-ruminant animals?" </td>
-                </tr>
-                <tr>
-                    <td>Lacks Context</td>
-                    <td>Sometimes it can be hard to discern if a tweet contains claims or evidence like "@mention @mention More people employed in plant based food production." if so then mark it as lacks context, but only do so sparringly and if you truly have a hard time deciding. Otherwise mark the tweets as not argumentative. </td>
+                    <td>A tweet is not argumentative if it is not clearly stating a self-contained claim. This could be because the stance of the claim is not clear, or the tweet does not clearly articulate a claim. Questions and irony or humor are automatically not argumentative and should be labeled as such.</td>
                 </tr>
                 </tbody>
             </table>
+            <strong>Examples:</strong>
+            <table class="table table-condensed table-striped table-responsive">
+                <colgroup>
+                    <col class="col-xs-6 col-md-6" />
+                    <col class="col-xs-2 col-md-2" />
+                    <col class="col-xs-4 col-md-4" />
+                </colgroup>
+                <!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+                <tbody>
+                <tr>
+                    <th>Tweet</th>
+                    <th>Label</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>"People need to stop trying to recreate meat"</td>
+                    <td>Argumentative</td>
+                    <td>This tweet contains a claim that "people should not pursue alternatives to meat" with a clear stance on the topic</td>
+                </tr>
+                <tr>
+                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Lol - and the wash post is the PR firm and Whole Foods is the official food supplier"</td>
+                    <td>Not argumentative</td>
+                    <td>This tweet answers with a joke or irony towards another unknown tweet and is therefore not argumentative.</td>
+                </tr>
+                <tr>    
+                    <td>"&lt;MENTION&gt; Could you share the literature which supports that Irish beef and lamb production is low GHG compared with meat from non-ruminant animals?"</td>
+                    <td>Not argumentative</td>
+                    <td>This tweet contains a claim that Irish beef and lamb production is low in GHG, but since it is asking it as a question, the stance towards the topic is unclear and, therefore, not argumentative.</td>
+                </tr>
+                <tr>
+                    <td>"Plant based options, yes!!!!!"</td>
+                    <td>Argumentative</td>
+                    <td>Here the claim is plant-based options are good with a clearly excited stance towards it</td>
+                </tr>
+                <tr>
+                    <td>
+                    "I found some doctors do recommend a plant based diet to ease the inflammation. Going meatless is even recommended by ICA"</td>
+                    <td>Argumentative</td>
+                    <td>This tweet contains the claim that plant-based diets ease inflammation, with evidence provieded by an expert. Due to the tweet recommending the claim it has a clear stance.</td>
+                </tr>
+                <tr>
+                    <td>
+                    "the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."
+                    <td>Argumentative</td>
+                    <td>This tweet states both evidence in the form of a fact with a stance towards cattle depending on the topic. Therefore it is argumentative.</td>
+                </tr>
+                <tr>    
+                    <td>"Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!"  </td>
+                    <td>Not argumentative</td>
+                    <td>This tweet is currently providing commentary on an event and has only a stance without a substantial claim and, as such, is not argumentative.</td>
+                </tr>
+                
+                </tbody>
+            </table>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End instructions --><!-- Categorization Layout -->
@@ -55,10 +106,6 @@
                     <label class="btn btn-default">
                         <input id="narg" name="argumentative" required="" type="radio" value="not argumentative" />
                         Not argumentative
-                    </label> 
-                    <label class="btn btn-default">
-                        <input id="ltcx" name="argumentative" required="" type="radio" value="lacks context" />
-                        Lacks Context
                     </label> 
                 </div>
             </div>
