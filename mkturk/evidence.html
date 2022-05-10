@@ -4,8 +4,9 @@
 <section class="container" id="Sentiment"><!-- Instructions (collapsible) -->
     <div class="row">
         <div class="col-xs-12 col-md-12">
-            <h3>Instructions</h3>
-        <blockquote>The task here is to annotate tweets in relation to a topic where you have to annotate what kind of evidence a tweet contains if any.<br/> Evidence is a statement used to support or attack a topic or claim. This can be done in combination with a claim, or it can also be self contained if it is just stating facts or referencing studies related to the topic. If the evidence is not related to the discussed topic, it is marked as unrelated. There excits different types of evidence, and if a tweet contains any evidence should have the type of it annotated.</blockquote>
+            <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Labeling instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+                <div class="panel-body" id="instructionBody">
+            <blockquote>The task here is to annotate tweets in relation to a topic where you have to annotate what kind of evidence a tweet contains if any.<br/> Evidence is a statement used to support or attack a topic or claim. This can be done in combination with a claim, or it can also be self contained if it is just stating facts or referencing studies related to the topic. If the evidence is not related to the discussed topic, it is marked as unrelated. There excits different types of evidence, and if a tweet contains any evidence should have the type of it annotated. If more than one type of evidence exists choose the type you think best describes the evidence in the tweet overall</blockquote>
             
             <br/>
             
@@ -59,6 +60,68 @@
                 </tr>
                 </tbody>
             </table>
+                    <br/><strong>Examples:</strong>
+            <table class="table table-condensed table-striped table-responsive">
+                <colgroup>
+                    <col class="col-xs-6 col-md-6" />
+                    <col class="col-xs-2 col-md-2" />
+                    <col class="col-xs-4 col-md-4" />
+                </colgroup>
+                <!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+                <tbody>
+                <tr>
+                    <th>Tweet</th>
+                    <th>Topics</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>"People need to stop trying to recreate meat, without ya know... meat"</td>
+                    <td>Normative</td>
+                    <td>This tweet contains a claim that "people should not pursue alternatives to meat" but it also contains a normative piece of evidence that meat falternatives are not meat</td>
+                </tr>
+                <tr>
+                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Lol - and the wash post is the PR firm and Whole Foods is the official food supplier"</td>
+                    <td>Unrelated or no evidence</td>
+                    <td>This tweet answers with a joke or irony towards another unknown tweet and is therefore does not contain a evidence.</td>
+                </tr>
+                <tr>    
+                    <td>
+                        &lt;MENTION&gt; Yes but to be fair: we can expect a massive increase in meat and dairy consumption in emerging countries that will severely limit the impact of whatever we do.<br/></td>
+                    <td>Normative</td>
+                    <td>This tweet contains a belif that emerging countries will remove any progress we can do, and is therefore normative evidence.</td>
+                </tr>
+                <tr>
+                    <td>"&lt;MENTION&gt; Many fruit and veg (which contain natural acid) don’t trigger flare ups- The list is long and varied (obs this may not apply to you) but after a little digging I found some doctors do recommend a plant based diet to ease the inflammation. Going meatless is even recommended by ICA"</td>
+                    <td>Expert</td>
+                    <td>This tweet contains 3 pieces of evidence. It contains a fact that fruit and veg contain natural acid and it contains 2 expert pieces by citing doctors and ICA recommendations. Since the main pieces of evidence or experts we annotate the tweet as such.</td>
+                </tr>
+                <tr>
+                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Green taxes go into subsidizing development and production of green energy solutions. If we were on 100% renewables, our electricity prices would not have needed to go up. We need to move into self-sufficient green energy as soon as possible"
+                    </td>
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet contains a very explicit claim regarding green energy and renewables. This makes it hard to assign to any of our topics as it is unrelated to any one of them, even the policy topic.</td>
+                </tr>
+                <tr>
+                    <td>
+                    "the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet states mainly evidence and does not have a clear claim that would be relevant to the topics.</td>
+                </tr>
+                <tr>    
+                    <td>"Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!"  </td>
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet is currently providing commentary on an event and has only a stance without a substantial claim and, as such, contains no relevant claim.</td>
+                </tr>
+                    <!-- Other good example of unrelated / no claim <MENTION> It's racist to club everyone and paint everyone as same. Only RSS/BJP type guys opposes freedom to eat, wear and read.
+
+I'm a pure vegetarian but that's personal choice same as anyone wants to eat meat or be Vegan.
+
+We should all learn to respect people's choicest and coexistence -->
+                
+                </tbody>
+            </table>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End instructions --><!-- Categorization Layout -->
@@ -69,7 +132,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-4 fields">
-            <div class="form-group"><!-- Question for the Worker --><label class="group-label">What class does the tweet belong to:</label> <!-- Input from the Worker -->
+            <div class="form-group"><!-- Question for the Worker --><label class="group-label">What type of evidence does the tweet contain in relation to the topic:</label> <!-- Input from the Worker -->
 
                 <div class="btn-group-vertical" data-toggle="buttons" id="Inputs">
                     <label class="btn btn-default">
@@ -94,12 +157,8 @@
                         Normative
                     </label> 
                     <label class="btn btn-default">
-                        <input id="un" name="evidence" required="" type="radio" value="unrelated" />
-                        Unrelated
-                    </label> 
-                    <label class="btn btn-default">
-                        <input id="noc" name="evidence" required="" type="radio" value="no evidence" />
-                        No Evidence
+                        <input id="un" name="evidence" required="" type="radio" value="no evidence" />
+                        Unrelated or no evidence
                     </label> 
                 </div>
             </div>

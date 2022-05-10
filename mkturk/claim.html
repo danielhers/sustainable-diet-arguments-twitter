@@ -4,90 +4,122 @@
 <section class="container" id="Sentiment"><!-- Instructions (collapsible) -->
     <div class="row">
         <div class="col-xs-12 col-md-12">
+            <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Labeling instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+                <div class="panel-body" id="instructionBody">
             <h3>Instructions</h3>
-            <blockquote>The task here is to annotate tweets in relation to a topic where you have to annotate what kind of claim a tweet contains if any.<br/> A claim is standpoint towards the topic being discussed either directly or indirectly. The claim should be able to clearly be identified in a tweet on its own without relying on an assumption from the reader. For response tweets this is an important issue as the user might implicitly be supporting a claim relevant for the topic, or adding a claim to a stance on the topic, such tweets should be annotated as not containing a claim. The claim should also clearly have either a postive stance or negative stance towards the discussed topic. If it does not have a clear stance towards the topic, it should be marked as unreleated.</blockquote>
+            <blockquote>The task here is to annotate a tweet in relation to a set of topics. Here the tweet can contain a claim that might be relevant to any one of the topics.<br/> Each tweet can be relevant for more than one of the topics, but it can also not be relevant for any one of the topics and should be annotated as such. Therefore, select the topics in which you find the tweet contains a claim relevant to an argument in a debate or communication campaign about the topic (regardless of your views on the claim and the topic and whether you would use it).<br/>
+                <strong class="text-danger">More specific instructions and examples follow below, please read them carefully</strong></blockquote>
             
             <br/>
+                        A claim is a standpoint toward a topic being discussed either directly or indirectly. The claim should be able to clearly be identified in a tweet on its own without relying on an assumption from the reader. This is an important issue for response tweets as the user might implicitly support a claim relevant to the topic or add a claim to a stance on the topic. Such tweets should not be annotated as containing a claim. <br/>
+                        <span class="text-danger">The claim should also clearly have a positive or negative stance toward the discussed topic.</span> <br/> Implicit claims are different from explicit ones as they lack the syntactic connection to the topic. 
+                        This means they omit parts of the discussed topic or have no direct connection to it; instead, they indirectly express a stance towards it. An example of this could be a tweet, "Gardening has been great for my family and me! Can't wait to collect the bounties of this year's harvest" which contains an implicit claim with a clear stance towards the topics "Plant based food should be encouraged" and "Vegan and vegetarian diets should be encouraged".
+                   <br/> <br/>
+                    Suppose the tweet contains a claim clearly discussing a different topic unrelated to any of the other topics. It should then be labeled with the "unrelated or no claim label" If the tweet does not contain a claim at all, then it should also be marked with the "unrelated or no claim label."
             
-            <strong>Select the class you best thinks describes the tweet:</strong>
+                <br/><strong>Examples:</strong>
             <table class="table table-condensed table-striped table-responsive">
-                <tbody>
-                </tbody>
                 <colgroup>
+                    <col class="col-xs-6 col-md-6" />
                     <col class="col-xs-2 col-md-2" />
-                    <col class="col-xs-10 col-md-10" />
+                    <col class="col-xs-4 col-md-4" />
                 </colgroup>
                 <!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
                 <tbody>
                 <tr>
-                    <th>Classes</th>
-                    <th>Guidance</th>
+                    <th>Tweet</th>
+                    <th>Topics</th>
+                    <th>Comment</th>
                 </tr>
                 <tr>
-                    <td>Implicit</td>
+                    <td>"People need to stop trying to recreate meat"</td>
+                    <td>"We should reduce the consumption of meat", "Meat alternatives should be encouraged"</td>
+                    <td>This tweet contains a claim that "people should not pursue alternatives to meat" this can be seen as an implicit claim against "We should reduce the consumption of meat" and an explicit claim against "Meat alternatives should be encouraged"</td>
+                </tr>
+                <tr>
+                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Lol - and the wash post is the PR firm and Whole Foods is the official food supplier"</td>
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet answers with a joke or irony towards another unknown tweet and is therefore does not contain a claim.</td>
+                </tr>
+                <tr>    
                     <td>
-                        An implicit claim is where the claim is not syntastically linked to the topic. This means that the tweet is claiming something for a similar topic or the same topic but is not explictly mentioning parts of the topic. <br/>
-                        An example of this: <br/>
-                        Topic: 	We should add a carbon tax to food production? <br/>
-                        Tweet: "@mention CAN WE GET RID OF THE STUPID CARBON TAX" <br/>
-                        The tweet leaves out any mention of food production of any sort, so could be making a claim about a similar topic like carbon taxes on fossile fuels, and therefore should be marked as implicit. <br/>
-                        If you are not sure if the claim is implicit or explicit, mark it as implicit.
-                    </td>
+                        "&lt;MENTION&gt; CAN WE GET RID OF THE STUPID CARBON TAX" <br/></td>
+                    <td>"We should pursue policies that promote sustainable foods"</td>
+                    <td>This tweet contains a claim regarding the carbon tax. This can be implicitly seen as a point of discussion regarding a policy for sustainable foods.</td>
                 </tr>
                 <tr>
-                    <td>Explicit</td>
-                    <td> 
-                    An explicit claim is clearly linked fully with the topic so every main point in the topic is covered by the tweets claim.<br/>
-                        An example of this:<br/>
-                        	Topic: Meat alternatives should be subsidized<br/>
-                            Tweet: "@mention It would also be nice if our government could begin subsidizing more sustainable options (like plant based meat) vs things like beef but... i digress" <br/>
-                        Here the tweet is clearly talking about all parts of the topic while having a clear stance towards the topic.
-                    </td>
+                    <td>"&lt;MENTION&gt; It would also be nice if our government could begin subsidizing more sustainable options (like plant based meat) vs things like beef but... i digress"</td>
+                    <td>"We should pursue policies that promote sustainable foods", "Meat alternatives should be encouraged", "We should reduce the consumption of meat"</td>
+                    <td>Here the claim is that plant-based options should be actively pursued explicitly by policy and implicitly through the encouragement of alternatives and reduction in meat.</td>
                 </tr>
                 <tr>
-                    <td>Unrelated</td>
-                    <td>The tweet contains a claim that is clearly discussing a different topic, or it contains a claim that is not clear in its stance towards the topic. <br/>
-                    An example of this: <br/>
-                        Topic: 	We should subsidize green nutrition <br/>
-                        Tweet: "@mention @mention Green taxes go into subsidizing development and production of green energy solutions. If we were on 100% renewables, our electricity prices would not have needed to go up. We need to move into self-sufficient green energy as soon as possible" <br/>
-                        The tweet has clearly claims about green energy but the topic is about green nutrition and it is therefore unrelated to the topic.
+                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Green taxes go into subsidizing development and production of green energy solutions. If we were on 100% renewables, our electricity prices would not have needed to go up. We need to move into self-sufficient green energy as soon as possible"
                     </td>
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet contains a very explicit claim regarding green energy and renewables. This makes it hard to assign to any of our topics as it is unrelated to any one of them, even the policy topic.</td>
                 </tr>
-                    <tr>
-                    <td>No Claim</td>
-                    <td>The tweet does not contain a claim at all. Any tweets where none of the above classes fit should be marked as no claim</td>
+                <tr>
+                    <td>
+                    "the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet states mainly evidence and does not have a clear claim that would be relevant to the topics.</td>
                 </tr>
+                <tr>    
+                    <td>"Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!"  </td>
+                    <td>Unrelated or no claim</td>
+                    <td>This tweet is currently providing commentary on an event and has only a stance without a substantial claim and, as such, contains no relevant claim.</td>
+                </tr>
+                    <!-- Other good example of unrelated / no claim <MENTION> It's racist to club everyone and paint everyone as same. Only RSS/BJP type guys opposes freedom to eat, wear and read.
+
+I'm a pure vegetarian but that's personal choice same as anyone wants to eat meat or be Vegan.
+
+We should all learn to respect people's choicest and coexistence -->
+                
                 </tbody>
             </table>
+                </div>
+            </div>
         </div>
     </div>
     <!-- End instructions --><!-- Categorization Layout -->
 
     <div class="row" id="workContent">
         <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
-            <p class="well"><strong>Topic: ${topic}</strong><br/>Tweet: ${tweet}</p>
+            <p class="well">Tweet: ${tweet}</p>
         </div>
 
         <div class="col-xs-12 col-sm-4 fields">
-            <div class="form-group"><!-- Question for the Worker --><label class="group-label">What class does the tweet belong to:</label> <!-- Input from the Worker -->
+            <div class="form-group"><!-- Question for the Worker --><label class="group-label">Select one or more topics that the tweet is related to. Remember to select a topic you think the tweet would be relevant for in a discussion, debate, or public communication.</label> <!-- Input from the Worker -->
 
-                <div class="btn-group-vertical" data-toggle="buttons" id="Inputs">
-                    <label class="btn btn-default">
+                <div class="input-group" data-toggle="buttons" id="Inputs">
+                    <label class="form-control">
                         
-                        <input id="imp" name="claim" required="" type="radio" value="implicit" />
-                        Implicit
+                        <input id="imp" name="claim" type="checkbox" class="required_group opt" value="We should reduce the consumption of meat" />
+                        We should reduce the consumption of meat
                     </label> 
-                    <label class="btn btn-default">
-                        <input id="exp" name="claim" required="" type="radio" value="explicit" />
-                        Explicit
+                    <label class="form-control">
+                        
+                        <input id="imp" name="claim"  type="checkbox" class="required_group opt" value="Plant based food should be encouraged" />
+                        Plant based food should be encouraged
                     </label> 
-                    <label class="btn btn-default">
-                        <input id="un" name="claim" required="" type="radio" value="unrelated" />
-                        Unrelated
+                    <label class="form-control">
+                        
+                        <input id="imp" name="claim"  type="checkbox" class="required_group opt" value="Meat alternatives should be encouraged" />
+                       Meat alternatives should be encouraged
                     </label> 
-                    <label class="btn btn-default">
-                        <input id="noc" name="claim" required="" type="radio" value="no claim" />
-                        No Claim
+                    <label class="form-control">
+                        
+                        <input id="imp" name="claim"  type="checkbox" class="required_group opt" value="Vegan and vegetarian diets should be encouraged" />
+                        Vegan and vegetarian diets should be encouraged
+                    </label> 
+                    <label class="form-control">
+                        
+                        <input id="imp" name="claim" type="checkbox" class="required_group opt" value="We should pursue policies that promote sustainable foods" />
+                        We should pursue policies that promote sustainable foods
+                    </label> 
+                    <label class="form-control">
+                        <input id="noc" name="claim" type="checkbox" class="required_group" value="no claim" />
+                        Unrelated or no claim
                     </label> 
                 </div>
             </div>
@@ -115,6 +147,9 @@
 #Inputs{
     display: block;
     margin-top: 10px;
+}
+.form-control {
+    height: 50px;
 }
 .content{
     margin-bottom: 15px;
@@ -155,6 +190,35 @@
             }
         });
         // end highlight
+        console.log($('#submitButton'))
+        $('#submitButton').on('click', function(e) {
+        var flag=false;
+        var opts = 0;
+         $('.required_group').each(function(){
+            if (this.checked) {
+                     flag=true;
+             }
+          });
+            
+        $('.opt').each(function(){
+            if (this.checked) {
+                     opts++;
+             }
+          });
+        if(!flag){
+               // Do your code for Error Message
+            e.preventDefault()
+            alert("You need to label at least one of the topics, or the 'unreleated or no topic'")
+        }
+        
+        if(opts > 0 && $('#noc:checked').length > 0){
+               // Do your code for Error Message
+            e.preventDefault()
+            alert("You can't both one of the topics and the 'unreleated or no topic'")
+        }
+        })
+        
     });
+
 </script><!-- Close internal javascript -->
         <p class="text-center"><input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /></p></form><script language="Javascript">turkSetAssignmentID();</script></body></html>

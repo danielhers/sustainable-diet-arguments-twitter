@@ -20,6 +20,9 @@ from transformers import TrainingArguments, Trainer
 from datasets import Dataset, load_metric
 from transformers import pipeline
 
+from rank_bm25 import BM25Okapi
+from sentence_transformers import SentenceTransformer, util
+
 import json
 import io
 from sklearn.dummy import DummyClassifier
@@ -70,6 +73,110 @@ def majority_class_baseline(df, tasks = possible_tasks, fold = 10):
     
     res = dummy_class_baseline(df, tasks, fold, strategy = 'prior')
     res = res.style.set_caption(f'Majority class results with {fold} fold split')
+    return res
+
+
+
+def bm25_baseline(df, tasks = possible_tasks, bm25_cutoff = 0.1):
+
+    if isinstance(tasks, str):
+        tasks = [tasks]
+    
+    if not isinstance(tasks, list):
+        return ValueError('Tasks is not a string or a list.')
+    
+    if not all(item in possible_tasks for item in tasks):
+        return ValueError(f'Tasks can only be or contain the following elements {possible_tasks} but found {tasks}')
+    
+    res = []
+    
+    
+    
+    
+    
+    topics = df.topic.drop_duplicates().tolist()
+    for topic in topics:
+        corpus = df[df.topic == topic].tweet.tolist()
+        tokenized_corpus = [doc.split(" ") for doc in corpus]
+        bm25 = BM25Okapi(tokenized_corpus)
+        tokenized_query = topic.split(" ")
+        df.loc[df.topic == topic, 'score'] = bm25.get_scores(tokenized_query) >= bm25_cutoff
+
+    for task in tasks:
+
+            
+        labels = df[task]
+        preds = np.round(df['score'].astype(int))
+        res.append((task, f1(preds, labels, average='micro'), ps(preds, labels, average='micro'), rs(preds, labels, average='micro')))
+    res = pd.DataFrame(res)
+    res.columns = ['Task', 'F1', 'Precision', 'Recall']
+    return res
+
+
+def qa_model_score(df, topics, model = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1', dot_score = True):    
+    df = df.copy()
+    df['score'] = [0]*len(df) 
+    
+    #Load the model
+    print('Loading model')
+    model = SentenceTransformer(model)
+
+    docs = df.tweet.values
+    doc_emb = model.encode(docs)
+
+    score_dfs = [] 
+    for topic in topics:
+        
+        print('Scoring tweet topic pair', f'"{topic}"')
+        df['score'] = [0]*len(df) 
+        df['topic'] = [topic]*len(df)
+    
+        #Encode query and documents
+        query_emb = model.encode(topic)
+        
+        if dot_score:
+            #Compute dot score between query and all document embeddings
+            scores = util.dot_score(query_emb, doc_emb)[0].cpu().tolist()
+        else:
+            scores = cosine_similarity(query_emb, doc_emb)[0].tolist()
+            
+        #Combine docs & scores
+        #doc_score_pairs = list(zip(docs, scores))
+        df['score'] = scores
+        score_dfs.append(df.copy())
+
+        #Sort by decreasing score
+        #doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x[1], reverse=True)
+    return score_dfs
+        
+
+
+def qa_model_baseline(df, tasks = possible_tasks, model = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1', model_cutoff = 0.5):
+
+    if isinstance(tasks, str):
+        tasks = [tasks]
+    
+    if not isinstance(tasks, list):
+        return ValueError('Tasks is not a string or a list.')
+    
+    if not all(item in possible_tasks for item in tasks):
+        return ValueError(f'Tasks can only be or contain the following elements {possible_tasks} but found {tasks}')
+    
+    res = []
+    
+    
+    print('Calculating scores')
+    topics = df.topic.drop_duplicates().tolist()
+    for topic in topics:
+        score_dfs = qa_model_score(df[df.topic == topic], [topic], model)[0]
+        df.loc[df.topic == topic, 'score'] = score_dfs.score >= model_cutoff
+    
+    for task in tasks:
+        labels = df[task]
+        preds = np.round(df['score'].astype(int))
+        res.append((task, f1(preds, labels, average='micro'), ps(preds, labels, average='micro'), rs(preds, labels, average='micro')))
+    res = pd.DataFrame(res)
+    res.columns = ['Task', 'F1', 'Precision', 'Recall']
     return res
 
 param_grid = { # Could be made an argument
@@ -199,7 +306,8 @@ def ibm_baseline(df, tasks = possible_tasks):
 
 
 
-def bert_baseline(df_train, df_test, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True, seed = 42, batch_size = 5, epochs = 1):
+
+def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True, seed = 42, batch_size = 5, epochs = 1):
     
     
     # Make sure task is correctly formatted
@@ -237,52 +345,67 @@ def bert_baseline(df_train, df_test, model_name='bert-base-cased', tasks = possi
     res = [] # Columns
     
     for task in tasks:
-        print('Loading language model')
-        model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+        kf = KFold(n_splits=fold)
+        tres = []
+        fold_num = 0
+        for train_index, test_index in kf.split(range(len(df))):
+            print('Splitting out data, for fold', fold_num + 1)
+            fold_num += 1
+            df_train = df.loc[train_index]
+            df_test = df.loc[test_index]
+            
+            print('Loading language model')
+            model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
+
+            print('Setting up dataset for', task)
+            df_train_renamed = df_train.rename(columns={task: "labels"})
+            df_train_renamed['labels'] = df_train_renamed['labels'].astype(int)  
+            df_test_renamed = df_test.rename(columns={task: "labels"})
+            df_test_renamed['labels'] = df_test_renamed['labels'].astype(int)
+
+            train_data = Dataset.from_pandas(df_train_renamed)
+            test_data  = Dataset.from_pandas(df_test_renamed)
+
+
+            train_processed = train_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size).remove_columns(['__index_level_0__'])
+            test_processed = test_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size).remove_columns(['__index_level_0__'])
+
+            
+            train_full = train_processed.shuffle(seed=seed).remove_columns( df_train_renamed.loc[:, df_train_renamed.columns != 'labels'].columns)
+            test_full  = test_processed.shuffle(seed=seed).remove_columns( df_test_renamed.loc[:, df_test_renamed.columns != 'labels'].columns)
+
+            print('Setting up training')
+
+            train_args = TrainingArguments(
+                output_dir = model_name + '_' + task,
+                per_device_train_batch_size = batch_size,
+                num_train_epochs = epochs,
+                evaluation_strategy='epoch'
+            )
+
+            trainer = Trainer(
+                model = model,
+                args = train_args,
+                train_dataset = train_full,
+                eval_dataset = test_full,
+                compute_metrics = compute_metrics,
+            )
+
+            print('Training')
+            trainer.train()
+
+            print('Inferring')
+            predictions = trainer.predict(test_full)
+            preds = predictions.predictions.argmax(-1)
+            del model
+            del train_full
+            del test_full
+            torch.cuda.empty_cache()
+            
+            label = df_test[task].to_numpy()
+            tres.append((f1(label, preds, average='micro'), ps(label, preds, average='micro'), rs(label, preds, average='micro')))
+        res.append(np.concatenate([[task], np.mean(tres, axis=0)]))
         
-        print('Setting up dataset for', task)
-        df_train_renamed = df_train.rename(columns={task: "labels"})
-        df_test_renamed = df_test.rename(columns={task: "labels"})
-        
-        train_data = Dataset.from_pandas(df_train_renamed)
-        test_data  = Dataset.from_pandas(df_test_renamed)
-        
-        
-        train_processed = train_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size)
-        test_processed = test_data.map(tokenize_function).map(lambda x: x, batched=True, batch_size = batch_size)
-        
-        train_full = train_processed.shuffle(seed=seed).remove_columns( df_train_renamed.loc[:, df_train_renamed.columns != 'labels'].columns)
-        test_full  = test_processed.shuffle(seed=seed).remove_columns( df_test_renamed.loc[:, df_test_renamed.columns != 'labels'].columns)
-        
-        
-        print('Setting up training')
-        
-        train_args = TrainingArguments(
-            output_dir = model_name + '_' + task,
-            per_device_train_batch_size = batch_size,
-            num_train_epochs = epochs,
-            evaluation_strategy='epoch'
-        )
-        
-        trainer = Trainer(
-            model = model,
-            args = train_args,
-            train_dataset = train_full,
-            eval_dataset = test_full,
-            compute_metrics = compute_metrics,
-        )
-        
-        print('Training')
-        trainer.train()
-        
-        print('Inferring')
-        predictions = trainer.predict(test_full)
-        preds = predictions.predictions.argmax(-1)
-        
-        label = df_test[task].to_numpy()
-        #print(label, test_full['labels'], predictions.predictions, preds)
-        
-        res.append((task, f1(label, preds, average='micro'), ps(label, preds, average='micro'), rs(label, preds, average='micro')))
     
     res = pd.DataFrame(res)
     res.columns = ('Tasks','F1', 'Precision', 'Recall')
