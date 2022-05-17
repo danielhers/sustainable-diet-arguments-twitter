@@ -6,7 +6,7 @@
         <div class="col-xs-12 col-md-12">
             <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Labeling instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
                 <div class="panel-body" id="instructionBody">
-            <blockquote>The task here is to annotate tweets in relation to a topic where you have to annotate what kind of evidence a tweet contains if any.<br/> Evidence is a statement used to support or attack a topic or claim. This can be done in combination with a claim, or it can also be self contained if it is just stating facts or referencing studies related to the topic. If the evidence is not related to the discussed topic, it is marked as unrelated. There excits different types of evidence, and if a tweet contains any evidence should have the type of it annotated. If more than one type of evidence exists choose the type you think best describes the evidence in the tweet overall</blockquote>
+            <blockquote>The task here is to annotate tweets related to a topic where you have to annotate what kind of evidence a tweet contains.<br/> Evidence is a statement used to support or attack a topic or claim. Evidence can be present in combination with a claim, or it can also be self-contained if it is just stating facts or referencing studies related to the topic. If the evidence is unrelated to the discussed topic, it is marked as unrelated. There exist different types of evidence, and if a tweet contains any evidence, it should have the kind of evidence annotated. If more than one type of evidence exists in the tweet, choose the type you think best describes main piece of evidence in the tweet that is relevant for the topic. <br/><br/> Be aware that the same tweet can show up multiple times and that each time it might have to be annotated differently for its evidence depending on the topic. Some tweets include various types of evidence where parts of the evidence are only relevant for one topic but not another. Therefore one tweet might have normative evidence for one topic but expert evidence for another and no evidence for a third.<br/> <strong>Remember, your goal is to annotate what type of evidence is in the tweet and if the evidence could be used in debate/argument or public communication both for or against the specified topic. Regardless of your views on the topic and whether the evidence is true or not.</strong></blockquote>
             
             <br/>
             
@@ -15,18 +15,23 @@
                 </tbody>
                 <colgroup>
                     <col class="col-xs-2 col-md-2" />
-                    <col class="col-xs-10 col-md-10" />
+                    <col class="col-xs-4 col-md-4" />
+                    <col class="col-xs-6 col-md-6" />
                 </colgroup>
                 <!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
                 <tbody>
                 <tr>
                     <th>Types of evidence</th>
                     <th>Guidance</th>
+                    <th>Example</th>
                 </tr>
                 <tr>
                     <td>Anecdotal</td>
                     <td>
                         A description of an episode(s), centered on individual(s) or clearly located in place and/or in time.
+                    </td>
+                    <td>
+                        In my experience, eating meat has helped me lose weight.
                     </td>
                 </tr>
                 <tr>
@@ -34,29 +39,39 @@
                     <td> 
                         Testimony by a person, group, committee, organization with some known expertise / authority on the topic.
                     </td>
+                    <td>
+                        The ICA is recommending eating less meat.
+                    </td>
                 </tr>
                 <tr>
                     <td>Study</td>
                     <td>Results of a quantitative analysis of data, given as numbers, or as conclusions<br/>
+                    </td>
+                    <td>
+                       Doctors have shown that eating less meat reduces the likelihood of a stroke by almost 20%. 
                     </td>
                 </tr>
                 <tr>
                     <td>Fact</td>
                     <td>A known piece of information about the world without a clear source for the information<br/>
                     </td>
+                    <td>
+                       Meat is denser in protein and essential amino acids when compared to most vegetables.
+                    </td>
                 </tr>
                 <tr>
                     <td>Normative</td>
                     <td>An added description for a belief about the world<br/>
                     </td>
+                    <td>
+                        We can expect a massive increase in meat consumption in emerging countries.
+                    </td>
                 </tr>
                 <tr>
-                    <td>Unrelated</td>
-                    <td>The tweet does contain evidence, but it is not related to the topic </td>
-                </tr>
-                <tr>
-                    <td>No Evidence</td>
-                    <td>The tweet does not contain a claim at all. Any tweets where none of the above classes fit should be marked as no claim</td>
+                    <td>Unrelated or no evidence</td>
+                    <td>The tweet does contain evidence, but it is not related to the topic, or it does not have any evidence.</td>
+                    <td>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -71,47 +86,61 @@
                 <tbody>
                 <tr>
                     <th>Tweet</th>
-                    <th>Topics</th>
+                    <th>Evidence</th>
                     <th>Comment</th>
                 </tr>
                 <tr>
-                    <td>"People need to stop trying to recreate meat, without ya know... meat"</td>
+                    <td>Topic: "We should reduce the consumption of meat"<br/>Tweet:"&lt;MENTION&gt; &lt;MENTION&gt; &lt;MENTION&gt; If we stop buying the meat excessively, they will stop producing excessively. We as consumers have power."</td>
                     <td>Normative</td>
-                    <td>This tweet contains a claim that "people should not pursue alternatives to meat" but it also contains a normative piece of evidence that meat falternatives are not meat</td>
+                    <td>This tweet contains a claim that "Consumers have power over meat production" with the belif that stopping with bying meat will reduce the production</td>
                 </tr>
                 <tr>
-                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Lol - and the wash post is the PR firm and Whole Foods is the official food supplier"</td>
-                    <td>Unrelated or no evidence</td>
-                    <td>This tweet answers with a joke or irony towards another unknown tweet and is therefore does not contain a evidence.</td>
+                    <td>Topic: "Vegan and vegetarian diets should be encouraged"<br/>Tweet:"It ain't even about JUST food, there are several ways this can be done!
+And The IPCC and every reputable nonbiased Study say plant-based diets are the least harmful of western diets, that includes Meat, since its everything "wrong" with Vegan diets x10. This is easily citable."</td>
+                    <td>Study</td>
+                    <td>This tweet makes multiple claims, but its main evidence is the IPCC, and multiple studies state that plant-based diets are the least harmful. The Twitter user is concluding their references. This is what differs the evidence from expert.</td>
                 </tr>
                 <tr>    
                     <td>
-                        &lt;MENTION&gt; Yes but to be fair: we can expect a massive increase in meat and dairy consumption in emerging countries that will severely limit the impact of whatever we do.<br/></td>
+                        Topic: "We should reduce the consumption of meat"<br/>Tweet:"&lt;MENTION&gt; Yes but to be fair: we can expect a massive increase in meat and dairy consumption in emerging countries that will severely limit the impact of whatever we do."</td>
                     <td>Normative</td>
                     <td>This tweet contains a belif that emerging countries will remove any progress we can do, and is therefore normative evidence.</td>
                 </tr>
-                <tr>
-                    <td>"&lt;MENTION&gt; Many fruit and veg (which contain natural acid) don’t trigger flare ups- The list is long and varied (obs this may not apply to you) but after a little digging I found some doctors do recommend a plant based diet to ease the inflammation. Going meatless is even recommended by ICA"</td>
-                    <td>Expert</td>
-                    <td>This tweet contains 3 pieces of evidence. It contains a fact that fruit and veg contain natural acid and it contains 2 expert pieces by citing doctors and ICA recommendations. Since the main pieces of evidence or experts we annotate the tweet as such.</td>
+                <tr>    
+                    <td>
+                        Topic: "Meat alternatives should be encouraged"<br/>Tweet:"&lt;MENTION&gt; Yes but to be fair: we can expect a massive increase in meat and dairy consumption in emerging countries that will severely limit the impact of whatever we do."</td>
+                    <td>Unrelated or no evidence</td>
+                    <td>This is the same tweet as above, with the main difference being the change in topic. The evidence in the tweet can not be used in relation to the topic and should therefore be annotaterd as unrelated.</td>
                 </tr>
                 <tr>
-                    <td>"&lt;MENTION&gt; &lt;MENTION&gt; Green taxes go into subsidizing development and production of green energy solutions. If we were on 100% renewables, our electricity prices would not have needed to go up. We need to move into self-sufficient green energy as soon as possible"
+                    <td>Topic: "Plant based food should be encouraged"<br/>Tweet:"&lt;MENTION&gt; Many fruit and veg (which contain natural acid) don’t trigger flare ups- The list is long and varied (obs this may not apply to you) but after a little digging I found some doctors do recommend a plant based diet to ease the inflammation. Going meatless is even recommended by ICA"</td>
+                    <td>Expert</td>
+                    <td>This tweet contains three pieces of evidence. It includes a fact that fruit and veg contain natural acid, and it contains two expert pieces citing doctors and ICA recommendations. Since the main pieces of evidence are from experts, we annotate the tweet as such.</td>
+                </tr>
+                <tr>
+                    <td>Topic: "Plant based food should be encouraged"<br/>Tweet:"&lt;MENTION&gt; &lt;MENTION&gt; Green taxes go into subsidizing development and production of green energy solutions. If we were on 100% renewables, our electricity prices would not have needed to go up. We need to move into self-sufficient green energy as soon as possible"
                     </td>
-                    <td>Unrelated or no claim</td>
-                    <td>This tweet contains a very explicit claim regarding green energy and renewables. This makes it hard to assign to any of our topics as it is unrelated to any one of them, even the policy topic.</td>
+                    <td>Unrelated or no evidence</td>
+                    <td>This tweet contains a examples of normative evidence but is unrelated to the topic and should therefore be annotated as unrelated.</td>
                 </tr>
                 <tr>
                     <td>
-                    "the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."
-                    <td>Unrelated or no claim</td>
-                    <td>This tweet states mainly evidence and does not have a clear claim that would be relevant to the topics.</td>
+                    Topic: "We should reduce the consumption of meat"<br/>Tweet:"the cattle after all are eating plant material that just pulled a stack of carbon out of the atmosphere in that annual production cycle where emission were created."
+                    <td>Fact</td>
+                    <td>This tweet does not contain any explicit claims. Still, it states a fact "that cattle pulls carbon out of the atmosphere." The evidence can be implicitly used in a discussion on the topic "We should reduce the consumption of meat," as it seems to have a negative stance towards the topic that "it might not be necessary to reduce the consumption."</td>
+                </tr>
+                    <tr>    
+                    <td>Topic:"Plant based food should be encouraged" <br/>Tweet:"&lt;MENTION&gt; Absolutely, we are lucky enough to be able to grow a few vegetables-reduces the Carbon footprint of a small portion of our food, we try and support local food producers-every little bit helps because collectively we can make a difference"</td>
+                    <td>Anecdotal</td>
+                    <td>Here the Twitter user is clearly positioning themselves into the argument with "we grow vegetables that reduce the carbon footprint of our food," even though part of the evidence is normative with "collectively we can make a difference," the main piece of evidence is the anecdotal story.</td>
                 </tr>
                 <tr>    
-                    <td>"Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!"  </td>
-                    <td>Unrelated or no claim</td>
+                    <td>Topic: "Plant based food should be encouraged"<br/>Tweet:"Sounds like a recipe for a good game so far! Leafs firepower vs Panthers comebacks!"  </td>
+                    <td>Unrelated or no evidence</td>
                     <td>This tweet is currently providing commentary on an event and has only a stance without a substantial claim and, as such, contains no relevant claim.</td>
                 </tr>
+                    
+                    	
                     <!-- Other good example of unrelated / no claim <MENTION> It's racist to club everyone and paint everyone as same. Only RSS/BJP type guys opposes freedom to eat, wear and read.
 
 I'm a pure vegetarian but that's personal choice same as anyone wants to eat meat or be Vegan.
@@ -128,11 +157,11 @@ We should all learn to respect people's choicest and coexistence -->
 
     <div class="row" id="workContent">
         <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
-            <p class="well"><strong>Topic: ${topic}</strong><br/>Tweet: ${tweet}</p>
+            <p class="well">Tweet: ${tweet}</p>
         </div>
 
         <div class="col-xs-12 col-sm-4 fields">
-            <div class="form-group"><!-- Question for the Worker --><label class="group-label">What type of evidence does the tweet contain in relation to the topic:</label> <!-- Input from the Worker -->
+            <div class="form-group"><!-- Question for the Worker --><label class="group-label">What type of evidence does the tweet contain in relation to the topic: <br/> <br/><strong>${topic}</strong></label> <!-- Input from the Worker -->
 
                 <div class="btn-group-vertical" data-toggle="buttons" id="Inputs">
                     <label class="btn btn-default">

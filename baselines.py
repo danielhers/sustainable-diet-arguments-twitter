@@ -30,7 +30,7 @@ from sklearn.dummy import DummyClassifier
 possible_tasks = ['argumentative', 'claim', 'evidence','procon'] 
 
 
-def dummy_class_baseline(df, tasks = possible_tasks, fold = 10, strategy="stratified"):
+def dummy_class_baseline(df, tasks = possible_tasks, fold = 10, strategy="stratified", average = 'micro'):
     
     if isinstance(tasks, str):
         tasks = [tasks]
@@ -58,14 +58,14 @@ def dummy_class_baseline(df, tasks = possible_tasks, fold = 10, strategy="strati
 
             labels = dummy_clf.predict(X_test)
         
-            tres.append((f1(X_test, labels, average='micro'), ps(X_test, labels, average='micro'), rs(X_test, labels, average='micro')))
+            tres.append((f1(X_test, labels, average=average), ps(X_test, labels, average=average), rs(X_test, labels, average=average)))
         res.append(np.concatenate([[task], np.mean(tres, axis=0)]))
     res = pd.DataFrame(res)
     res.columns = ['Task', 'F1', 'Precision', 'Recall']
     return res
 
 def random_class_baseline(df, tasks = possible_tasks, fold = 10):
-    res = dummy_class_baseline(df, tasks, fold, strategy = 'stratified')
+    res = dummy_class_baseline(df, tasks, fold, strategy = 'stratified', average = 'binary')
     res = res.style.set_caption(f'Random class results with {fold} fold split using weighted approach')
     return res
 
@@ -77,7 +77,7 @@ def majority_class_baseline(df, tasks = possible_tasks, fold = 10):
 
 
 
-def bm25_baseline(df, tasks = possible_tasks, bm25_cutoff = 0.1):
+def bm25_baseline(df, tasks = possible_tasks, bm25_cutoff = 0.1, average = 'binary'):
 
     if isinstance(tasks, str):
         tasks = [tasks]
@@ -107,7 +107,7 @@ def bm25_baseline(df, tasks = possible_tasks, bm25_cutoff = 0.1):
             
         labels = df[task]
         preds = np.round(df['score'].astype(int))
-        res.append((task, f1(preds, labels, average='micro'), ps(preds, labels, average='micro'), rs(preds, labels, average='micro')))
+        res.append((task, f1(preds, labels, average=average), ps(preds, labels, average=average), rs(preds, labels, average=average)))
     res = pd.DataFrame(res)
     res.columns = ['Task', 'F1', 'Precision', 'Recall']
     return res
@@ -151,7 +151,7 @@ def qa_model_score(df, topics, model = 'sentence-transformers/multi-qa-MiniLM-L6
         
 
 
-def qa_model_baseline(df, tasks = possible_tasks, model = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1', model_cutoff = 0.5):
+def qa_model_baseline(df, tasks = possible_tasks, model = 'sentence-transformers/multi-qa-MiniLM-L6-cos-v1', model_cutoff = 0.5, average = 'binary'):
 
     if isinstance(tasks, str):
         tasks = [tasks]
@@ -174,14 +174,14 @@ def qa_model_baseline(df, tasks = possible_tasks, model = 'sentence-transformers
     for task in tasks:
         labels = df[task]
         preds = np.round(df['score'].astype(int))
-        res.append((task, f1(preds, labels, average='micro'), ps(preds, labels, average='micro'), rs(preds, labels, average='micro')))
+        res.append((task, f1(preds, labels, average=average), ps(preds, labels, average=average), rs(preds, labels, average=average)))
     res = pd.DataFrame(res)
     res.columns = ['Task', 'F1', 'Precision', 'Recall']
     return res
 
 param_grid = { # Could be made an argument
     #'gamma': [0,0.1,0.2,0.4,0.8,1.0],
-    #'learning_rate': [0.01, 0.03, 0.06],
+    'learning_rate': [0.01, 0.03, 0.06],
     'max_depth': [1,3,5,6,7,8,9,10],
     'n_estimators': [1,2,5,7,10,15,20,25,30,40,60,80,100],
     #'reg_alpha': [0,0.1,0.2,0.4,0.8,1.0],
@@ -191,7 +191,7 @@ param_grid = { # Could be made an argument
     'tree_method':["gpu_hist"]
 }
 
-def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True):
+def xgboost_baseline(df, model_name='bert-base-cased', fold = 3, tasks = possible_tasks, use_topic = True, average = ''): # empty average is binary
     
     tweet_embeddings = []
     
@@ -212,8 +212,14 @@ def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, u
     # Get embeddings
     print('Generating the embeddings')
     for topic, tweet in zip(df.topic, df.tweet):
-        sent = Sentence(f'{topic}[SEP]{tweet}') if use_topic else Sentence(tweet)
-        tweet_embeddings.append(embedding.embed(sent)[0].get_embedding().cpu().detach().numpy())
+        if use_topic:
+            tweet_emb = embedding.embed(Sentence(tweet))[0].get_embedding().cpu().detach().numpy()
+            topic_emb = embedding.embed(Sentence(topic))[0].get_embedding().cpu().detach().numpy()
+            con = np.concatenate((tweet_emb,topic_emb))
+            tweet_embeddings.append(con)
+        else:
+            sent = Sentence(tweet)
+            tweet_embeddings.append(embedding.embed(sent)[0].get_embedding().cpu().detach().numpy())
     
     tweets_data = np.array(tweet_embeddings)
     
@@ -241,11 +247,15 @@ def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, u
         clf0.fit(data, label)
         params = pd.DataFrame(clf0.cv_results_)
         best = params[params.rank_test_score == 1].iloc[0]
+        print('Best parameters:')
+        print(best['params'])
         model = xgb.XGBRFClassifier(n_estimators=best['param_n_estimators'], max_depth=best['param_max_depth'], objective='binary:logistic', eval_metric='auc', tree_method="gpu_hist")
         
-        cv_results = cross_validate(model, data, label, scoring=('f1', 'precision', 'recall'), cv=10)
+        end = f'_{average}' if average != '' else ''
         
-        res.append((task, cv_results['test_f1'].mean(), cv_results['test_precision'].mean(),cv_results['test_recall'].mean()))
+        cv_results = cross_validate(model, data, label, scoring=(f'f1{end}', f'precision{end}', f'recall{end}'), cv=fold)
+        
+        res.append((task, cv_results[f'test_f1{end}'].mean(), cv_results[f'test_precision{end}'].mean(),cv_results[f'test_recall{end}'].mean()))
     
     res = pd.DataFrame(res)
     res.columns = ('Tasks','F1', 'Precision', 'Recall')
@@ -253,7 +263,7 @@ def xgboost_baseline(df, model_name='bert-base-cased', tasks = possible_tasks, u
     return res
         
     
-def ibm_baseline(df, tasks = possible_tasks):
+def ibm_baseline(df, tasks = possible_tasks, average = 'binary'):
     if not isinstance(tasks, str) and not isinstance(tasks, list):
         raise ValueError("task must be list or str")
     
@@ -297,7 +307,7 @@ def ibm_baseline(df, tasks = possible_tasks):
         else:
             scores = np.round(client.run(data))
         
-        res.append((task, f1(label, scores), ps(label, scores), rs(label, scores)))
+        res.append((task, f1(label, scores, average=average), ps(label, scores, average=average), rs(label, scores, average=average)))
         
     res = pd.DataFrame(res)
     res.columns = ('Tasks','F1', 'Precision', 'Recall')
@@ -306,8 +316,8 @@ def ibm_baseline(df, tasks = possible_tasks):
 
 
 
-
-def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True, seed = 42, batch_size = 5, epochs = 1):
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_tasks, use_topic = True, seed = 42, batch_size = 5, epochs = 1, learning_rate = 5e-5, average='binary'):
     
     
     # Make sure task is correctly formatted
@@ -331,12 +341,25 @@ def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_t
         else:
             tweet = examples['tweet']
         
-        return tokenizer(tweet, padding="max_length", truncation=True, add_special_tokens=True)
+        return tokenizer(tweet, padding="max_length", max_length=68, truncation=True, add_special_tokens=True)
 
-    def compute_metrics(eval_pred):
-        logits, labels = eval_pred
-        predictions = np.argmax(logits, axis=-1)
-        return metric.compute(predictions=predictions, references=labels)
+    def compute_metrics(pred):
+        #logits, labels = eval_pred
+        labels = pred.label_ids
+        preds = pred.predictions.argmax(-1)
+        precision, recall, f1, _ = precision_recall_fscore_support(labels, preds, average=average)
+        acc = accuracy_score(labels, preds)
+        return {
+            'accuracy': acc,
+            'f1': f1,
+            'precision': precision,
+            'recall': recall,
+            'avg_label': np.mean(labels),
+            'avg_preds': np.mean(preds),
+            'avg_prediction': np.array_str(np.mean(pred.predictions, axis=0)),
+        }
+        #predictions = np.argmax(logits, axis=-1)
+        #return metric.compute(predictions=predictions, references=labels)
     
         
     
@@ -380,7 +403,9 @@ def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_t
                 output_dir = model_name + '_' + task,
                 per_device_train_batch_size = batch_size,
                 num_train_epochs = epochs,
-                evaluation_strategy='epoch'
+                evaluation_strategy='epoch',
+                learning_rate = learning_rate,
+                save_total_limit = 1
             )
 
             trainer = Trainer(
@@ -403,7 +428,7 @@ def bert_baseline(df, fold = 3, model_name='bert-base-cased', tasks = possible_t
             torch.cuda.empty_cache()
             
             label = df_test[task].to_numpy()
-            tres.append((f1(label, preds, average='micro'), ps(label, preds, average='micro'), rs(label, preds, average='micro')))
+            tres.append((f1(label, preds, average=average), ps(label, preds, average=average), rs(label, preds, average=average)))
         res.append(np.concatenate([[task], np.mean(tres, axis=0)]))
         
     
